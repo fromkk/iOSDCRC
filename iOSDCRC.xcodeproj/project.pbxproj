@@ -40,6 +40,26 @@
 		ADDAD349210487DF00B1153E /* RootEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD348210487DF00B1153E /* RootEntity.swift */; };
 		ADDAD34B2104890600B1153E /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD34A2104890600B1153E /* RootPresenter.swift */; };
 		ADDAD34D2104892000B1153E /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD34C2104892000B1153E /* RootInteractor.swift */; };
+		ADDAD35D21048E0100B1153E /* TimetableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDAD35421048E0000B1153E /* TimetableView.framework */; };
+		ADDAD36421048E0100B1153E /* TimetableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD36321048E0100B1153E /* TimetableViewTests.swift */; };
+		ADDAD36621048E0100B1153E /* TimetableView.h in Headers */ = {isa = PBXBuildFile; fileRef = ADDAD35621048E0100B1153E /* TimetableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADDAD36921048E0100B1153E /* TimetableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDAD35421048E0000B1153E /* TimetableView.framework */; };
+		ADDAD36A21048E0100B1153E /* TimetableView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ADDAD35421048E0000B1153E /* TimetableView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ADDAD37621048E7300B1153E /* TimetableViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD37121048E7200B1153E /* TimetableViewConfiguration.swift */; };
+		ADDAD37721048E7300B1153E /* TimetableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD37221048E7200B1153E /* TimetableViewDataSource.swift */; };
+		ADDAD37821048E7300B1153E /* TimetableViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD37321048E7200B1153E /* TimetableViewItem.swift */; };
+		ADDAD37921048E7300B1153E /* TimetableViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD37421048E7200B1153E /* TimetableViewLayout.swift */; };
+		ADDAD37A21048E7300B1153E /* TimetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD37521048E7300B1153E /* TimetableView.swift */; };
+		ADDAD37E21049D4900B1153E /* TimesScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD37B21049D4800B1153E /* TimesScrollView.swift */; };
+		ADDAD37F21049D4900B1153E /* TracksScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD37C21049D4800B1153E /* TracksScrollView.swift */; };
+		ADDAD38021049D4900B1153E /* TimetableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD37D21049D4800B1153E /* TimetableCell.swift */; };
+		ADDAD38321049DA600B1153E /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD38221049DA600B1153E /* Reusable.swift */; };
+		ADDAD38521049DBD00B1153E /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD38421049DBD00B1153E /* Date+Extensions.swift */; };
+		ADDAD38821049DFC00B1153E /* TimetableEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD38721049DFC00B1153E /* TimetableEntity.swift */; };
+		ADDAD38A2104A9F700B1153E /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD3892104A9F700B1153E /* TimetableViewController.swift */; };
+		ADDAD38F2104AEBE00B1153E /* TimetablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD38E2104AEBE00B1153E /* TimetablePresenter.swift */; };
+		ADDAD3912104AEC500B1153E /* TimetableInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD3902104AEC500B1153E /* TimetableInteractor.swift */; };
+		ADDAD3932104AEF300B1153E /* iosdcrc.json in Resources */ = {isa = PBXBuildFile; fileRef = ADDAD3922104AEF200B1153E /* iosdcrc.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +98,27 @@
 			remoteGlobalIDString = AD5CBED02104431900F32701;
 			remoteInfo = API;
 		};
+		ADDAD35E21048E0100B1153E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD5CBE892104195E00F32701 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADDAD35321048E0000B1153E;
+			remoteInfo = TimetableView;
+		};
+		ADDAD36021048E0100B1153E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD5CBE892104195E00F32701 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD5CBE902104195E00F32701;
+			remoteInfo = iOSDCRC;
+		};
+		ADDAD36721048E0100B1153E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD5CBE892104195E00F32701 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADDAD35321048E0000B1153E;
+			remoteInfo = TimetableView;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -88,6 +129,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				AD5CBEE82104431A00F32701 /* API.framework in Embed Frameworks */,
+				ADDAD36A21048E0100B1153E /* TimetableView.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +178,27 @@
 		ADDAD348210487DF00B1153E /* RootEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootEntity.swift; sourceTree = "<group>"; };
 		ADDAD34A2104890600B1153E /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
 		ADDAD34C2104892000B1153E /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
+		ADDAD35421048E0000B1153E /* TimetableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TimetableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADDAD35621048E0100B1153E /* TimetableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimetableView.h; sourceTree = "<group>"; };
+		ADDAD35721048E0100B1153E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADDAD35C21048E0100B1153E /* TimetableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimetableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADDAD36321048E0100B1153E /* TimetableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewTests.swift; sourceTree = "<group>"; };
+		ADDAD36521048E0100B1153E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADDAD37121048E7200B1153E /* TimetableViewConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableViewConfiguration.swift; sourceTree = "<group>"; };
+		ADDAD37221048E7200B1153E /* TimetableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableViewDataSource.swift; sourceTree = "<group>"; };
+		ADDAD37321048E7200B1153E /* TimetableViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableViewItem.swift; sourceTree = "<group>"; };
+		ADDAD37421048E7200B1153E /* TimetableViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableViewLayout.swift; sourceTree = "<group>"; };
+		ADDAD37521048E7300B1153E /* TimetableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableView.swift; sourceTree = "<group>"; };
+		ADDAD37B21049D4800B1153E /* TimesScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimesScrollView.swift; sourceTree = "<group>"; };
+		ADDAD37C21049D4800B1153E /* TracksScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksScrollView.swift; sourceTree = "<group>"; };
+		ADDAD37D21049D4800B1153E /* TimetableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableCell.swift; sourceTree = "<group>"; };
+		ADDAD38221049DA600B1153E /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		ADDAD38421049DBD00B1153E /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		ADDAD38721049DFC00B1153E /* TimetableEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableEntity.swift; sourceTree = "<group>"; };
+		ADDAD3892104A9F700B1153E /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
+		ADDAD38E2104AEBE00B1153E /* TimetablePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetablePresenter.swift; sourceTree = "<group>"; };
+		ADDAD3902104AEC500B1153E /* TimetableInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableInteractor.swift; sourceTree = "<group>"; };
+		ADDAD3922104AEF200B1153E /* iosdcrc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = iosdcrc.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD5CBEE62104431A00F32701 /* API.framework in Frameworks */,
+				ADDAD36921048E0100B1153E /* TimetableView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +240,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ADDAD35021048E0000B1153E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADDAD35921048E0100B1153E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADDAD35D21048E0100B1153E /* TimetableView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -187,6 +266,8 @@
 				AD5CBEB32104196200F32701 /* iOSDCRCUITests */,
 				AD5CBED22104431900F32701 /* API */,
 				AD5CBEDF2104431A00F32701 /* APITests */,
+				ADDAD35521048E0100B1153E /* TimetableView */,
+				ADDAD36221048E0100B1153E /* TimetableViewTests */,
 				AD5CBE922104195E00F32701 /* Products */,
 				AD5CBEC321041AF000F32701 /* Frameworks */,
 			);
@@ -200,6 +281,8 @@
 				AD5CBEB02104196200F32701 /* iOSDCRCUITests.xctest */,
 				AD5CBED12104431900F32701 /* API.framework */,
 				AD5CBED92104431900F32701 /* APITests.xctest */,
+				ADDAD35421048E0000B1153E /* TimetableView.framework */,
+				ADDAD35C21048E0100B1153E /* TimetableViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -207,6 +290,7 @@
 		AD5CBE932104195E00F32701 /* iOSDCRC */ = {
 			isa = PBXGroup;
 			children = (
+				ADDAD38B2104ACBC00B1153E /* Resources */,
 				ADDAD33C2104838300B1153E /* Extensions */,
 				AD5CBEC621041C4500F32701 /* Constants */,
 				AD5CBEC92104428100F32701 /* API */,
@@ -302,7 +386,8 @@
 				ADDAD335210474C600B1153E /* About */,
 				ADDAD31C21044EB300B1153E /* Timeline */,
 				ADDAD336210474CE00B1153E /* Timetable */,
-				ADDAD337210474E200B1153E /* Sponser */,
+				ADDAD34E21048DD100B1153E /* Speaker */,
+				ADDAD337210474E200B1153E /* Sponsor */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -370,15 +455,20 @@
 		ADDAD336210474CE00B1153E /* Timetable */ = {
 			isa = PBXGroup;
 			children = (
+				ADDAD38121049D4B00B1153E /* View */,
+				ADDAD38C2104AE9B00B1153E /* Interactor */,
+				ADDAD38D2104AEA100B1153E /* Presenter */,
+				ADDAD38621049DE100B1153E /* Entity */,
+				ADDAD3892104A9F700B1153E /* TimetableViewController.swift */,
 			);
 			path = Timetable;
 			sourceTree = "<group>";
 		};
-		ADDAD337210474E200B1153E /* Sponser */ = {
+		ADDAD337210474E200B1153E /* Sponsor */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Sponser;
+			path = Sponsor;
 			sourceTree = "<group>";
 		};
 		ADDAD338210479F800B1153E /* Root */ = {
@@ -398,6 +488,8 @@
 			isa = PBXGroup;
 			children = (
 				ADDAD33D210483F700B1153E /* UIView+Extensions.swift */,
+				ADDAD38221049DA600B1153E /* Reusable.swift */,
+				ADDAD38421049DBD00B1153E /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -442,6 +534,78 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		ADDAD34E21048DD100B1153E /* Speaker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Speaker;
+			sourceTree = "<group>";
+		};
+		ADDAD35521048E0100B1153E /* TimetableView */ = {
+			isa = PBXGroup;
+			children = (
+				ADDAD37521048E7300B1153E /* TimetableView.swift */,
+				ADDAD37121048E7200B1153E /* TimetableViewConfiguration.swift */,
+				ADDAD37221048E7200B1153E /* TimetableViewDataSource.swift */,
+				ADDAD37321048E7200B1153E /* TimetableViewItem.swift */,
+				ADDAD37421048E7200B1153E /* TimetableViewLayout.swift */,
+				ADDAD35621048E0100B1153E /* TimetableView.h */,
+				ADDAD35721048E0100B1153E /* Info.plist */,
+			);
+			path = TimetableView;
+			sourceTree = "<group>";
+		};
+		ADDAD36221048E0100B1153E /* TimetableViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				ADDAD36321048E0100B1153E /* TimetableViewTests.swift */,
+				ADDAD36521048E0100B1153E /* Info.plist */,
+			);
+			path = TimetableViewTests;
+			sourceTree = "<group>";
+		};
+		ADDAD38121049D4B00B1153E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADDAD37D21049D4800B1153E /* TimetableCell.swift */,
+				ADDAD37B21049D4800B1153E /* TimesScrollView.swift */,
+				ADDAD37C21049D4800B1153E /* TracksScrollView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ADDAD38621049DE100B1153E /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				ADDAD38721049DFC00B1153E /* TimetableEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		ADDAD38B2104ACBC00B1153E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ADDAD3922104AEF200B1153E /* iosdcrc.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ADDAD38C2104AE9B00B1153E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				ADDAD3902104AEC500B1153E /* TimetableInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		ADDAD38D2104AEA100B1153E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				ADDAD38E2104AEBE00B1153E /* TimetablePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -450,6 +614,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD5CBEE32104431A00F32701 /* API.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADDAD35121048E0000B1153E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADDAD36621048E0100B1153E /* TimetableView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +642,7 @@
 			);
 			dependencies = (
 				AD5CBEE52104431A00F32701 /* PBXTargetDependency */,
+				ADDAD36821048E0100B1153E /* PBXTargetDependency */,
 			);
 			name = iOSDCRC;
 			productName = iOSDCRC;
@@ -549,6 +722,43 @@
 			productReference = AD5CBED92104431900F32701 /* APITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		ADDAD35321048E0000B1153E /* TimetableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADDAD36B21048E0100B1153E /* Build configuration list for PBXNativeTarget "TimetableView" */;
+			buildPhases = (
+				ADDAD34F21048E0000B1153E /* Sources */,
+				ADDAD35021048E0000B1153E /* Frameworks */,
+				ADDAD35121048E0000B1153E /* Headers */,
+				ADDAD35221048E0000B1153E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimetableView;
+			productName = TimetableView;
+			productReference = ADDAD35421048E0000B1153E /* TimetableView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ADDAD35B21048E0100B1153E /* TimetableViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADDAD36E21048E0100B1153E /* Build configuration list for PBXNativeTarget "TimetableViewTests" */;
+			buildPhases = (
+				ADDAD35821048E0100B1153E /* Sources */,
+				ADDAD35921048E0100B1153E /* Frameworks */,
+				ADDAD35A21048E0100B1153E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADDAD35F21048E0100B1153E /* PBXTargetDependency */,
+				ADDAD36121048E0100B1153E /* PBXTargetDependency */,
+			);
+			name = TimetableViewTests;
+			productName = TimetableViewTests;
+			productReference = ADDAD35C21048E0100B1153E /* TimetableViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -578,6 +788,14 @@
 						CreatedOnToolsVersion = 9.4.1;
 						TestTargetID = AD5CBE902104195E00F32701;
 					};
+					ADDAD35321048E0000B1153E = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
+					};
+					ADDAD35B21048E0100B1153E = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = AD5CBE902104195E00F32701;
+					};
 				};
 			};
 			buildConfigurationList = AD5CBE8C2104195E00F32701 /* Build configuration list for PBXProject "iOSDCRC" */;
@@ -598,6 +816,8 @@
 				AD5CBEAF2104196200F32701 /* iOSDCRCUITests */,
 				AD5CBED02104431900F32701 /* API */,
 				AD5CBED82104431900F32701 /* APITests */,
+				ADDAD35321048E0000B1153E /* TimetableView */,
+				ADDAD35B21048E0100B1153E /* TimetableViewTests */,
 			);
 		};
 /* End PBXProject section */
@@ -607,6 +827,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADDAD3932104AEF300B1153E /* iosdcrc.json in Resources */,
 				AD5CBE9F2104196200F32701 /* LaunchScreen.storyboard in Resources */,
 				AD5CBE9C2104196200F32701 /* Assets.xcassets in Resources */,
 			);
@@ -640,6 +861,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ADDAD35221048E0000B1153E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADDAD35A21048E0100B1153E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -666,6 +901,7 @@
 			files = (
 				AD5CBE972104195E00F32701 /* TimelineViewController.swift in Sources */,
 				ADDAD3412104851100B1153E /* RootLogoView.swift in Sources */,
+				ADDAD38A2104A9F700B1153E /* TimetableViewController.swift in Sources */,
 				ADDAD31E21044EC300B1153E /* TimelineInteractor.swift in Sources */,
 				ADDAD33A21047B3600B1153E /* RootViewController.swift in Sources */,
 				AD5CBE952104195E00F32701 /* AppDelegate.swift in Sources */,
@@ -673,14 +909,22 @@
 				ADDAD34D2104892000B1153E /* RootInteractor.swift in Sources */,
 				AD5CBF1F2104439E00F32701 /* Twitter.swift in Sources */,
 				ADDAD33E210483F700B1153E /* UIView+Extensions.swift in Sources */,
+				ADDAD38F2104AEBE00B1153E /* TimetablePresenter.swift in Sources */,
 				ADDAD3232104511400B1153E /* TwitterRequest+Token.swift in Sources */,
+				ADDAD38521049DBD00B1153E /* Date+Extensions.swift in Sources */,
 				ADDAD32921045E3300B1153E /* TwitterRequest+Search.swift in Sources */,
+				ADDAD38821049DFC00B1153E /* TimetableEntity.swift in Sources */,
+				ADDAD37F21049D4900B1153E /* TracksScrollView.swift in Sources */,
+				ADDAD3912104AEC500B1153E /* TimetableInteractor.swift in Sources */,
+				ADDAD38321049DA600B1153E /* Reusable.swift in Sources */,
 				ADDAD33121045F8500B1153E /* TwitterResponse+Status.swift in Sources */,
 				ADDAD34B2104890600B1153E /* RootPresenter.swift in Sources */,
 				AD5CBEC821041C5600F32701 /* Constants.swift in Sources */,
+				ADDAD37E21049D4900B1153E /* TimesScrollView.swift in Sources */,
 				ADDAD349210487DF00B1153E /* RootEntity.swift in Sources */,
 				ADDAD32121044F7B00B1153E /* TimelinePresenter.swift in Sources */,
 				ADDAD32F21045F3100B1153E /* TwitterResponse+User.swift in Sources */,
+				ADDAD38021049D4900B1153E /* TimetableCell.swift in Sources */,
 				ADDAD32D21045EDB00B1153E /* TwitterResponse+Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -722,6 +966,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ADDAD34F21048E0000B1153E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADDAD37A21048E7300B1153E /* TimetableView.swift in Sources */,
+				ADDAD37921048E7300B1153E /* TimetableViewLayout.swift in Sources */,
+				ADDAD37821048E7300B1153E /* TimetableViewItem.swift in Sources */,
+				ADDAD37621048E7300B1153E /* TimetableViewConfiguration.swift in Sources */,
+				ADDAD37721048E7300B1153E /* TimetableViewDataSource.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADDAD35821048E0100B1153E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADDAD36421048E0100B1153E /* TimetableViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -749,6 +1013,21 @@
 			isa = PBXTargetDependency;
 			target = AD5CBED02104431900F32701 /* API */;
 			targetProxy = AD5CBEE42104431A00F32701 /* PBXContainerItemProxy */;
+		};
+		ADDAD35F21048E0100B1153E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADDAD35321048E0000B1153E /* TimetableView */;
+			targetProxy = ADDAD35E21048E0100B1153E /* PBXContainerItemProxy */;
+		};
+		ADDAD36121048E0100B1153E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD5CBE902104195E00F32701 /* iOSDCRC */;
+			targetProxy = ADDAD36021048E0100B1153E /* PBXContainerItemProxy */;
+		};
+		ADDAD36821048E0100B1153E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADDAD35321048E0000B1153E /* TimetableView */;
+			targetProxy = ADDAD36721048E0100B1153E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1109,6 +1388,107 @@
 			};
 			name = Release;
 		};
+		ADDAD36C21048E0100B1153E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = K84E4S7G4C;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TimetableView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.TimetableView;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ADDAD36D21048E0100B1153E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = K84E4S7G4C;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TimetableView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.TimetableView;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ADDAD36F21048E0100B1153E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K84E4S7G4C;
+				INFOPLIST_FILE = TimetableViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.TimetableViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSDCRC.app/iOSDCRC";
+			};
+			name = Debug;
+		};
+		ADDAD37021048E0100B1153E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K84E4S7G4C;
+				INFOPLIST_FILE = TimetableViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.TimetableViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSDCRC.app/iOSDCRC";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1162,6 +1542,24 @@
 			buildConfigurations = (
 				AD5CBEED2104431A00F32701 /* Debug */,
 				AD5CBEEE2104431A00F32701 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADDAD36B21048E0100B1153E /* Build configuration list for PBXNativeTarget "TimetableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADDAD36C21048E0100B1153E /* Debug */,
+				ADDAD36D21048E0100B1153E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADDAD36E21048E0100B1153E /* Build configuration list for PBXNativeTarget "TimetableViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADDAD36F21048E0100B1153E /* Debug */,
+				ADDAD37021048E0100B1153E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

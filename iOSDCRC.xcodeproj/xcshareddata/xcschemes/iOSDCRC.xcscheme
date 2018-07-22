@@ -58,6 +58,16 @@
                ReferencedContainer = "container:iOSDCRC.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "ADDAD35B21048E0100B1153E"
+               BuildableName = "TimetableViewTests.xctest"
+               BlueprintName = "TimetableViewTests"
+               ReferencedContainer = "container:iOSDCRC.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

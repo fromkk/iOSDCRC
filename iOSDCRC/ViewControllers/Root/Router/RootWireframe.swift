@@ -38,7 +38,8 @@ class RootWireframe: RootWireframeProtocol {
     }
     
     func timetable() {
-        // TODO: Implements
+        let timetableViewController = TimetableViewController()
+        viewController.navigationController?.pushViewController(timetableViewController, animated: true)
     }
     
     func speaker() {
