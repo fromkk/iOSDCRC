@@ -13,12 +13,18 @@ protocol TimelineViewProtocol: class {
     func showAlertTimelineGetFailed()
 }
 
-class TimelineViewController: UIViewController, TimelineViewProtocol {
+class TimelineViewController: UITableViewController, TimelineViewProtocol {
 
+    override func loadView() {
+        super.loadView()
+        
+        title = "Timeline"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-     
-        presenter.viewDidLoad()
+        
+        presenter.loadTimeline()
     }
     
     // MARK: - Elements

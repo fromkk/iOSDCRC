@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AD5CBE952104195E00F32701 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5CBE942104195E00F32701 /* AppDelegate.swift */; };
 		AD5CBE972104195E00F32701 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5CBE962104195E00F32701 /* TimelineViewController.swift */; };
-		AD5CBE9A2104195E00F32701 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5CBE982104195E00F32701 /* Main.storyboard */; };
 		AD5CBE9C2104196200F32701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD5CBE9B2104196200F32701 /* Assets.xcassets */; };
 		AD5CBE9F2104196200F32701 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5CBE9D2104196200F32701 /* LaunchScreen.storyboard */; };
 		AD5CBEAA2104196200F32701 /* iOSDCRCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5CBEA92104196200F32701 /* iOSDCRCTests.swift */; };
@@ -34,6 +33,13 @@
 		ADDAD32D21045EDB00B1153E /* TwitterResponse+Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD32C21045EDB00B1153E /* TwitterResponse+Token.swift */; };
 		ADDAD32F21045F3100B1153E /* TwitterResponse+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD32E21045F3100B1153E /* TwitterResponse+User.swift */; };
 		ADDAD33121045F8500B1153E /* TwitterResponse+Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD33021045F8500B1153E /* TwitterResponse+Status.swift */; };
+		ADDAD33A21047B3600B1153E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD33921047B3600B1153E /* RootViewController.swift */; };
+		ADDAD33E210483F700B1153E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD33D210483F700B1153E /* UIView+Extensions.swift */; };
+		ADDAD3412104851100B1153E /* RootLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD3402104851100B1153E /* RootLogoView.swift */; };
+		ADDAD3472104876F00B1153E /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD3462104876F00B1153E /* RootWireframe.swift */; };
+		ADDAD349210487DF00B1153E /* RootEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD348210487DF00B1153E /* RootEntity.swift */; };
+		ADDAD34B2104890600B1153E /* RootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD34A2104890600B1153E /* RootPresenter.swift */; };
+		ADDAD34D2104892000B1153E /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD34C2104892000B1153E /* RootInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +98,6 @@
 		AD5CBE912104195E00F32701 /* iOSDCRC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDCRC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5CBE942104195E00F32701 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD5CBE962104195E00F32701 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
-		AD5CBE992104195E00F32701 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD5CBE9B2104196200F32701 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD5CBE9E2104196200F32701 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD5CBEA02104196200F32701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,6 +129,13 @@
 		ADDAD32C21045EDB00B1153E /* TwitterResponse+Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TwitterResponse+Token.swift"; sourceTree = "<group>"; };
 		ADDAD32E21045F3100B1153E /* TwitterResponse+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TwitterResponse+User.swift"; sourceTree = "<group>"; };
 		ADDAD33021045F8500B1153E /* TwitterResponse+Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TwitterResponse+Status.swift"; sourceTree = "<group>"; };
+		ADDAD33921047B3600B1153E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		ADDAD33D210483F700B1153E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		ADDAD3402104851100B1153E /* RootLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootLogoView.swift; sourceTree = "<group>"; };
+		ADDAD3462104876F00B1153E /* RootWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWireframe.swift; sourceTree = "<group>"; };
+		ADDAD348210487DF00B1153E /* RootEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootEntity.swift; sourceTree = "<group>"; };
+		ADDAD34A2104890600B1153E /* RootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPresenter.swift; sourceTree = "<group>"; };
+		ADDAD34C2104892000B1153E /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,11 +207,11 @@
 		AD5CBE932104195E00F32701 /* iOSDCRC */ = {
 			isa = PBXGroup;
 			children = (
-				AD5CBEC92104428100F32701 /* API */,
+				ADDAD33C2104838300B1153E /* Extensions */,
 				AD5CBEC621041C4500F32701 /* Constants */,
+				AD5CBEC92104428100F32701 /* API */,
 				ADDAD31A21044E6300B1153E /* ViewControllers */,
 				AD5CBE942104195E00F32701 /* AppDelegate.swift */,
-				AD5CBE982104195E00F32701 /* Main.storyboard */,
 				AD5CBE9B2104196200F32701 /* Assets.xcassets */,
 				AD5CBE9D2104196200F32701 /* LaunchScreen.storyboard */,
 				AD5CBEA02104196200F32701 /* Info.plist */,
@@ -286,7 +298,11 @@
 		ADDAD31A21044E6300B1153E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				ADDAD338210479F800B1153E /* Root */,
+				ADDAD335210474C600B1153E /* About */,
 				ADDAD31C21044EB300B1153E /* Timeline */,
+				ADDAD336210474CE00B1153E /* Timetable */,
+				ADDAD337210474E200B1153E /* Sponser */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -302,8 +318,9 @@
 		ADDAD31C21044EB300B1153E /* Timeline */ = {
 			isa = PBXGroup;
 			children = (
-				ADDAD31F21044F6800B1153E /* Presenter */,
+				ADDAD3342104748D00B1153E /* View */,
 				ADDAD31B21044E7C00B1153E /* Interactor */,
+				ADDAD31F21044F6800B1153E /* Presenter */,
 				AD5CBE962104195E00F32701 /* TimelineViewController.swift */,
 			);
 			path = Timeline;
@@ -334,6 +351,95 @@
 				ADDAD33021045F8500B1153E /* TwitterResponse+Status.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		ADDAD3342104748D00B1153E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ADDAD335210474C600B1153E /* About */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		ADDAD336210474CE00B1153E /* Timetable */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Timetable;
+			sourceTree = "<group>";
+		};
+		ADDAD337210474E200B1153E /* Sponser */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sponser;
+			sourceTree = "<group>";
+		};
+		ADDAD338210479F800B1153E /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				ADDAD33F210484EC00B1153E /* View */,
+				ADDAD3432104873700B1153E /* Interactor */,
+				ADDAD3422104863100B1153E /* Presenter */,
+				ADDAD3442104874700B1153E /* Entity */,
+				ADDAD3452104875B00B1153E /* Router */,
+				ADDAD33921047B3600B1153E /* RootViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		ADDAD33C2104838300B1153E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ADDAD33D210483F700B1153E /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ADDAD33F210484EC00B1153E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADDAD3402104851100B1153E /* RootLogoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ADDAD3422104863100B1153E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				ADDAD34A2104890600B1153E /* RootPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		ADDAD3432104873700B1153E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				ADDAD34C2104892000B1153E /* RootInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		ADDAD3442104874700B1153E /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				ADDAD348210487DF00B1153E /* RootEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		ADDAD3452104875B00B1153E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				ADDAD3462104876F00B1153E /* RootWireframe.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -503,7 +609,6 @@
 			files = (
 				AD5CBE9F2104196200F32701 /* LaunchScreen.storyboard in Resources */,
 				AD5CBE9C2104196200F32701 /* Assets.xcassets in Resources */,
-				AD5CBE9A2104195E00F32701 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,13 +665,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD5CBE972104195E00F32701 /* TimelineViewController.swift in Sources */,
+				ADDAD3412104851100B1153E /* RootLogoView.swift in Sources */,
 				ADDAD31E21044EC300B1153E /* TimelineInteractor.swift in Sources */,
+				ADDAD33A21047B3600B1153E /* RootViewController.swift in Sources */,
 				AD5CBE952104195E00F32701 /* AppDelegate.swift in Sources */,
+				ADDAD3472104876F00B1153E /* RootWireframe.swift in Sources */,
+				ADDAD34D2104892000B1153E /* RootInteractor.swift in Sources */,
 				AD5CBF1F2104439E00F32701 /* Twitter.swift in Sources */,
+				ADDAD33E210483F700B1153E /* UIView+Extensions.swift in Sources */,
 				ADDAD3232104511400B1153E /* TwitterRequest+Token.swift in Sources */,
 				ADDAD32921045E3300B1153E /* TwitterRequest+Search.swift in Sources */,
 				ADDAD33121045F8500B1153E /* TwitterResponse+Status.swift in Sources */,
+				ADDAD34B2104890600B1153E /* RootPresenter.swift in Sources */,
 				AD5CBEC821041C5600F32701 /* Constants.swift in Sources */,
+				ADDAD349210487DF00B1153E /* RootEntity.swift in Sources */,
 				ADDAD32121044F7B00B1153E /* TimelinePresenter.swift in Sources */,
 				ADDAD32F21045F3100B1153E /* TwitterResponse+User.swift in Sources */,
 				ADDAD32D21045EDB00B1153E /* TwitterResponse+Token.swift in Sources */,
@@ -641,14 +753,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AD5CBE982104195E00F32701 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD5CBE992104195E00F32701 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AD5CBE9D2104196200F32701 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

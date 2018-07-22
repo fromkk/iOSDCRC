@@ -15,7 +15,7 @@ protocol TimelinePresenterProtocol: class {
     )
     init(dependencies: Dependencies)
     
-    func viewDidLoad()
+    func loadTimeline()
 }
 
 class TimelinePresenter: TimelinePresenterProtocol {
@@ -31,7 +31,7 @@ class TimelinePresenter: TimelinePresenterProtocol {
     
     var accessToken: String?
     
-    func viewDidLoad() {
+    func loadTimeline() {
         interactor.token(with: Constants.Twitter.consumerKey, and: Constants.Twitter.consumerSecret) { [weak self] (accessToken) in
             guard let accessToken = accessToken else {
                 self?.view.showAlertTokenGetFailed()
