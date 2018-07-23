@@ -81,7 +81,15 @@ class TimelineViewController: UITableViewController, TimelineViewProtocol {
             ]))
         
         cell.nameLabel.attributedText = name
-        cell.tweetLabel.text = tweet.text
+        
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = 4.0
+        cell.tweetLabel.attributedText = NSAttributedString(string: tweet.text, attributes: [
+            .paragraphStyle: style,
+            .font: UIFont.systemFont(ofSize: 14, weight: .light),
+            .foregroundColor: #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
+            ])
+        cell.dateLabel.text = TweetDateConverter.convert(tweet.createdAt)
     }
     
     // MARK: - UITableViewDelegate

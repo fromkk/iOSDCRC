@@ -23,6 +23,8 @@ final class TimelineCell: UITableViewCell, ReusableTableViewCell {
     }
     
     private lazy var setUp: () -> () = {
+        selectionStyle = .none
+        
         contentView.addSubview(iconImageView, constraints: [
             iconImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             iconImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
@@ -32,14 +34,14 @@ final class TimelineCell: UITableViewCell, ReusableTableViewCell {
             ])
         
         contentView.addSubview(dateLabel, constraints: [
-            contentView.trailingAnchor.constraint(equalTo: dateLabel.trailingAnchor, constant: 16),
+            contentView.trailingAnchor.constraint(greaterThanOrEqualTo: dateLabel.trailingAnchor, constant: 16),
             dateLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
             ])
         
         contentView.addSubview(nameLabel, constraints: [
             nameLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: 16),
             nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            dateLabel.leadingAnchor.constraint(greaterThanOrEqualTo: nameLabel.trailingAnchor, constant: 8)
+            dateLabel.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 8)
             ])
         
         contentView.addSubview(tweetLabel, constraints: [
@@ -77,7 +79,7 @@ final class TimelineCell: UITableViewCell, ReusableTableViewCell {
         let label = UILabel()
         label.textAlignment = .right
         label.numberOfLines = 1
-        label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        label.font = UIFont.systemFont(ofSize: 14, weight: .light)
         label.textColor = #colorLiteral(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)
         return label
     }()

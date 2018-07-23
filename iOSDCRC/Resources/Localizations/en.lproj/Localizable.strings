@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  iOSDCRC
+
+  Created by Kazuya Ueoka on 2018/07/23.
+  Copyright © 2018 Kazuya Ueoka. All rights reserved.
+*/
+
+"Tweet.Date.Seconds" = "s";
+
+"Tweet.Date.Minutes" = "m";
+
+"Tweet.Date.Hour" = "h";
+
+"Tweet.Date.Day" = "d";

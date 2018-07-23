@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AD1449F121055CDA00E0BFAE /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1449F021055CDA00E0BFAE /* TimelineCell.swift */; };
+		AD2BFF812105C5BC00187D05 /* TweetDateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BFF802105C5BC00187D05 /* TweetDateConverter.swift */; };
+		AD2BFF852105C71D00187D05 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD2BFF872105C71D00187D05 /* Localizable.strings */; };
 		AD5CBE952104195E00F32701 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5CBE942104195E00F32701 /* AppDelegate.swift */; };
 		AD5CBE972104195E00F32701 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5CBE962104195E00F32701 /* TimelineViewController.swift */; };
 		AD5CBE9C2104196200F32701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD5CBE9B2104196200F32701 /* Assets.xcassets */; };
@@ -140,6 +142,9 @@
 
 /* Begin PBXFileReference section */
 		AD1449F021055CDA00E0BFAE /* TimelineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
+		AD2BFF802105C5BC00187D05 /* TweetDateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDateConverter.swift; sourceTree = "<group>"; };
+		AD2BFF862105C71D00187D05 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AD2BFF882105C72700187D05 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AD5CBE912104195E00F32701 /* iOSDCRC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDCRC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5CBE942104195E00F32701 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD5CBE962104195E00F32701 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
@@ -262,6 +267,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD2BFF822105C6F100187D05 /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				AD2BFF872105C71D00187D05 /* Localizable.strings */,
+			);
+			path = Localizations;
+			sourceTree = "<group>";
+		};
 		AD5CBE882104195E00F32701 = {
 			isa = PBXGroup;
 			children = (
@@ -446,6 +459,7 @@
 			isa = PBXGroup;
 			children = (
 				AD1449F021055CDA00E0BFAE /* TimelineCell.swift */,
+				AD2BFF802105C5BC00187D05 /* TweetDateConverter.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -591,6 +605,7 @@
 		ADDAD38B2104ACBC00B1153E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AD2BFF822105C6F100187D05 /* Localizations */,
 				ADDAD3922104AEF200B1153E /* iosdcrc.json */,
 			);
 			path = Resources;
@@ -811,6 +826,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = AD5CBE882104195E00F32701;
 			productRefGroup = AD5CBE922104195E00F32701 /* Products */;
@@ -834,6 +850,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADDAD3932104AEF300B1153E /* iosdcrc.json in Resources */,
+				AD2BFF852105C71D00187D05 /* Localizable.strings in Resources */,
 				AD5CBE9F2104196200F32701 /* LaunchScreen.storyboard in Resources */,
 				AD5CBE9C2104196200F32701 /* Assets.xcassets in Resources */,
 			);
@@ -921,6 +938,7 @@
 				ADDAD3232104511400B1153E /* TwitterRequest+Token.swift in Sources */,
 				ADDAD38521049DBD00B1153E /* Date+Extensions.swift in Sources */,
 				ADDAD32921045E3300B1153E /* TwitterRequest+Search.swift in Sources */,
+				AD2BFF812105C5BC00187D05 /* TweetDateConverter.swift in Sources */,
 				ADDAD38821049DFC00B1153E /* TimetableEntity.swift in Sources */,
 				ADDAD37F21049D4900B1153E /* TracksScrollView.swift in Sources */,
 				ADDAD3912104AEC500B1153E /* TimetableInteractor.swift in Sources */,
@@ -1040,6 +1058,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		AD2BFF872105C71D00187D05 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD2BFF862105C71D00187D05 /* en */,
+				AD2BFF882105C72700187D05 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		AD5CBE9D2104196200F32701 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1055,6 +1082,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1102,7 +1130,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1115,6 +1143,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1156,7 +1185,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
