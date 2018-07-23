@@ -9,6 +9,8 @@
 import Foundation
 
 protocol TimelinePresenterProtocol: class {
+    typealias Tweet = Twitter.Response.Status
+    
     typealias Dependencies = (
         view: TimelineViewProtocol,
         interactor: TimelineInteractorProtocol
@@ -16,6 +18,10 @@ protocol TimelinePresenterProtocol: class {
     init(dependencies: Dependencies)
     
     func loadTimeline()
+    
+    func numberOfTweets() -> Int
+    
+    func tweet(at index: Int) -> Tweet?
 }
 
 class TimelinePresenter: TimelinePresenterProtocol {
@@ -43,13 +49,25 @@ class TimelinePresenter: TimelinePresenterProtocol {
         }
     }
     
+    var tweets: [Tweet] = []
+    
     func search(count: Int = 100, sinceID: Int? = nil, maxID: Int? = nil) {
         guard let accessToken = accessToken else {
             return
         }
         
-        interactor.search(with: accessToken, andKeyword: "#iosdcrc", count: count, sinceID: sinceID, maxID: maxID, completion: {
-            
+        interactor.search(with: accessToken, andKeyword: keyword, count: count, sinceID: sinceID, maxID: maxID, completion: { [weak self] tweets in
+            self?.tweets = tweets
+            self?.view.showTimeline()
         })
+    }
+    
+    func numberOfTweets() -> Int {
+        return tweets.count
+    }
+    
+    func tweet(at index: Int) -> TimelinePresenterProtocol.Tweet? {
+        guard index < numberOfTweets() else { return nil }
+        return tweets[index]
     }
 }

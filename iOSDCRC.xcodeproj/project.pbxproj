@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD1449F121055CDA00E0BFAE /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1449F021055CDA00E0BFAE /* TimelineCell.swift */; };
 		AD5CBE952104195E00F32701 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5CBE942104195E00F32701 /* AppDelegate.swift */; };
 		AD5CBE972104195E00F32701 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5CBE962104195E00F32701 /* TimelineViewController.swift */; };
 		AD5CBE9C2104196200F32701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD5CBE9B2104196200F32701 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		AD5CBEF92104432900F32701 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5CBEF32104432900F32701 /* HTTPMethod.swift */; };
 		AD5CBEFA2104432900F32701 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5CBEF42104432900F32701 /* Task.swift */; };
 		AD5CBF1F2104439E00F32701 /* Twitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5CBF1E2104439E00F32701 /* Twitter.swift */; };
+		AD6B2A1A21056C95001B6C4E /* NSLayoutConstraint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6B2A1921056C95001B6C4E /* NSLayoutConstraint+Extensions.swift */; };
 		ADDAD31E21044EC300B1153E /* TimelineInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD31D21044EC300B1153E /* TimelineInteractor.swift */; };
 		ADDAD32121044F7B00B1153E /* TimelinePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD32021044F7B00B1153E /* TimelinePresenter.swift */; };
 		ADDAD3232104511400B1153E /* TwitterRequest+Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD3222104511400B1153E /* TwitterRequest+Token.swift */; };
@@ -137,6 +139,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AD1449F021055CDA00E0BFAE /* TimelineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
 		AD5CBE912104195E00F32701 /* iOSDCRC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDCRC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5CBE942104195E00F32701 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD5CBE962104195E00F32701 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +167,7 @@
 		AD5CBEF32104432900F32701 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		AD5CBEF42104432900F32701 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		AD5CBF1E2104439E00F32701 /* Twitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twitter.swift; sourceTree = "<group>"; };
+		AD6B2A1921056C95001B6C4E /* NSLayoutConstraint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Extensions.swift"; sourceTree = "<group>"; };
 		ADDAD31D21044EC300B1153E /* TimelineInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineInteractor.swift; sourceTree = "<group>"; };
 		ADDAD32021044F7B00B1153E /* TimelinePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelinePresenter.swift; sourceTree = "<group>"; };
 		ADDAD3222104511400B1153E /* TwitterRequest+Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TwitterRequest+Token.swift"; sourceTree = "<group>"; };
@@ -441,6 +445,7 @@
 		ADDAD3342104748D00B1153E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AD1449F021055CDA00E0BFAE /* TimelineCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -490,6 +495,7 @@
 				ADDAD33D210483F700B1153E /* UIView+Extensions.swift */,
 				ADDAD38221049DA600B1153E /* Reusable.swift */,
 				ADDAD38421049DBD00B1153E /* Date+Extensions.swift */,
+				AD6B2A1921056C95001B6C4E /* NSLayoutConstraint+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -907,6 +913,8 @@
 				AD5CBE952104195E00F32701 /* AppDelegate.swift in Sources */,
 				ADDAD3472104876F00B1153E /* RootWireframe.swift in Sources */,
 				ADDAD34D2104892000B1153E /* RootInteractor.swift in Sources */,
+				AD1449F121055CDA00E0BFAE /* TimelineCell.swift in Sources */,
+				AD6B2A1A21056C95001B6C4E /* NSLayoutConstraint+Extensions.swift in Sources */,
 				AD5CBF1F2104439E00F32701 /* Twitter.swift in Sources */,
 				ADDAD33E210483F700B1153E /* UIView+Extensions.swift in Sources */,
 				ADDAD38F2104AEBE00B1153E /* TimetablePresenter.swift in Sources */,
