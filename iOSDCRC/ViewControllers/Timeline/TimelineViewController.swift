@@ -92,6 +92,21 @@ class TimelineViewController: UITableViewController, TimelineViewProtocol {
         cell.dateLabel.text = TweetDateConverter.convert(tweet.createdAt)
     }
     
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let cell = cell as? TimelineCell, let tweet = presenter.tweet(at: indexPath.row) else { return }
+        
+        cell.iconImageView.image = nil
+        cell.task = ImageLoader.load(with: tweet.user.profileImageUrlHttps, completion: { (image, error) in
+            guard let image = image, cell.task?.url == tweet.user.profileImageUrlHttps else { return }
+            cell.iconImageView.image = image
+        })
+    }
+    
+    override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let cell = cell as? TimelineCell else { return }
+        cell.task?.cancel()
+    }
+    
     // MARK: - UITableViewDelegate
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {

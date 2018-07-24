@@ -28,8 +28,8 @@ final class TimelineCell: UITableViewCell, ReusableTableViewCell {
         contentView.addSubview(iconImageView, constraints: [
             iconImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             iconImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            iconImageView.widthAnchor.constraint(equalToConstant: 64).priority(.required),
-            iconImageView.heightAnchor.constraint(equalToConstant: 64).priority(.required),
+            iconImageView.widthAnchor.constraint(equalToConstant: 48).priority(.required),
+            iconImageView.heightAnchor.constraint(equalToConstant: 48).priority(.required),
             contentView.bottomAnchor.constraint(greaterThanOrEqualTo: iconImageView.bottomAnchor, constant: 8)
             ])
         
@@ -54,11 +54,17 @@ final class TimelineCell: UITableViewCell, ReusableTableViewCell {
         return {}
     }()
     
+    // MARK: - Elements
+    
+    var task: ImageLoader.Task?
+    
+    // MARK: - UI
+    
     lazy var iconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 32
+        imageView.layer.cornerRadius = 24
         imageView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         imageView.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
         imageView.setContentHuggingPriority(.defaultLow, for: .horizontal)
@@ -88,7 +94,7 @@ final class TimelineCell: UITableViewCell, ReusableTableViewCell {
         let label = UILabel()
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
-        label.font = UIFont.systemFont(ofSize: 14, weight: .light)
+        label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         label.textColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
         return label
     }()

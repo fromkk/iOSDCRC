@@ -13,11 +13,13 @@ extension Twitter.Response {
         var id: Int
         var name: String
         var screenName: String
+        var profileImageUrlHttps: URL
         
         private enum CodingKeys: String, CodingKey {
             case id
             case name
             case screenName = "screen_name"
+            case profileImageUrlHttps = "profile_image_url_https"
         }
         
     }
