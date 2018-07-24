@@ -11,7 +11,7 @@ import API
 
 protocol TimelineInteractorProtocol {
     func token(with consumerKey: String, and consumerSecret: String, completion: @escaping (String?) -> ())
-    func search(with accessToken: String, andKeyword keyword: String, count: Int, sinceID: Int?, maxID: Int?, completion: @escaping ([Twitter.Response.Status]) -> ())
+    func search(with accessToken: String, andKeyword keyword: String, count: Int, sinceID: Int64?, maxID: Int64?, completion: @escaping ([Twitter.Response.Status]) -> ())
 }
 
 class TimelineInteractor: TimelineInteractorProtocol {
@@ -26,7 +26,7 @@ class TimelineInteractor: TimelineInteractorProtocol {
         }
     }
     
-    func search(with accessToken: String, andKeyword keyword: String, count: Int = 100, sinceID: Int? = nil, maxID: Int? = nil, completion: @escaping ([Twitter.Response.Status]) -> ()) {
+    func search(with accessToken: String, andKeyword keyword: String, count: Int = 100, sinceID: Int64? = nil, maxID: Int64? = nil, completion: @escaping ([Twitter.Response.Status]) -> ()) {
         let search = Twitter.Request.Search(accessToken: accessToken, q: keyword, count: count, sinceID: sinceID, maxID: maxID)
         Session.dateDecodingStrategy = Twitter.Response.dateDecodingStrategy
         Session.json(with: search, and: Twitter.Response.Statuses.self) { (result, error) in

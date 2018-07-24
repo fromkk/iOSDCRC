@@ -11,7 +11,7 @@ import API
 
 extension Twitter.Request {
     struct Search: TwitterAuthorizedRequestable {
-        init(accessToken: String, q: String, count: Int = 100, sinceID: Int? = nil, maxID: Int? = nil) {
+        init(accessToken: String, q: String, count: Int = 100, sinceID: Int64? = nil, maxID: Int64? = nil) {
             self.accessToken = accessToken
             self.q = q
             self.count = count
@@ -27,13 +27,13 @@ extension Twitter.Request {
         
         var q: String
         
-        var count: Int = 100
+        var count: Int
         
         var resultType: String = "recent"
         
-        var sinceID: Int? = nil
+        var sinceID: Int64? = nil
         
-        var maxID: Int? = nil
+        var maxID: Int64? = nil
         
         var query: [String : String]? {
             var query: [String: String] = [

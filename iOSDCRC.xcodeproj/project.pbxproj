@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD0042DF2107350B0057AA83 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0042DE2107350B0057AA83 /* LoadingView.swift */; };
 		AD1449F121055CDA00E0BFAE /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1449F021055CDA00E0BFAE /* TimelineCell.swift */; };
 		AD2BFF812105C5BC00187D05 /* TweetDateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BFF802105C5BC00187D05 /* TweetDateConverter.swift */; };
 		AD2BFF852105C71D00187D05 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD2BFF872105C71D00187D05 /* Localizable.strings */; };
@@ -143,6 +144,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AD0042DE2107350B0057AA83 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		AD1449F021055CDA00E0BFAE /* TimelineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
 		AD2BFF802105C5BC00187D05 /* TweetDateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDateConverter.swift; sourceTree = "<group>"; };
 		AD2BFF862105C71D00187D05 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -271,6 +273,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD0042DD210734F50057AA83 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AD0042DE2107350B0057AA83 /* LoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		AD2BFF822105C6F100187D05 /* Localizations */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,11 +321,12 @@
 		AD5CBE932104195E00F32701 /* iOSDCRC */ = {
 			isa = PBXGroup;
 			children = (
-				AD65BB342106AD4F007BE9AF /* Support */,
+				AD65BB342106AD4F007BE9AF /* Supports */,
 				ADDAD38B2104ACBC00B1153E /* Resources */,
 				ADDAD33C2104838300B1153E /* Extensions */,
 				AD5CBEC621041C4500F32701 /* Constants */,
 				AD5CBEC92104428100F32701 /* API */,
+				AD0042DD210734F50057AA83 /* Views */,
 				ADDAD31A21044E6300B1153E /* ViewControllers */,
 				AD5CBE942104195E00F32701 /* AppDelegate.swift */,
 				AD5CBE9B2104196200F32701 /* Assets.xcassets */,
@@ -391,13 +402,13 @@
 			path = APITests;
 			sourceTree = "<group>";
 		};
-		AD65BB342106AD4F007BE9AF /* Support */ = {
+		AD65BB342106AD4F007BE9AF /* Supports */ = {
 			isa = PBXGroup;
 			children = (
 				AD65BB352106AD6E007BE9AF /* ImageLoader.swift */,
 				AD65BB372106ADD6007BE9AF /* Cancellable.swift */,
 			);
-			path = Support;
+			path = Supports;
 			sourceTree = "<group>";
 		};
 		ADDAD3172104487F00B1153E /* Twitter */ = {
@@ -950,6 +961,7 @@
 				ADDAD33E210483F700B1153E /* UIView+Extensions.swift in Sources */,
 				ADDAD38F2104AEBE00B1153E /* TimetablePresenter.swift in Sources */,
 				ADDAD3232104511400B1153E /* TwitterRequest+Token.swift in Sources */,
+				AD0042DF2107350B0057AA83 /* LoadingView.swift in Sources */,
 				ADDAD38521049DBD00B1153E /* Date+Extensions.swift in Sources */,
 				ADDAD32921045E3300B1153E /* TwitterRequest+Search.swift in Sources */,
 				AD2BFF812105C5BC00187D05 /* TweetDateConverter.swift in Sources */,

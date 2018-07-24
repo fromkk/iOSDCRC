@@ -9,7 +9,12 @@
 import UIKit
 
 protocol TimelineViewProtocol: class {
+    func showLoading()
+    func hideLoading()
+    
     func showTimeline()
+    func addTimeline(at indexes: [Int])
+    
     func showAlertTokenGetFailed()
     func showAlertTimelineGetFailed()
 }
@@ -22,6 +27,13 @@ class TimelineViewController: UITableViewController, TimelineViewProtocol {
         title = "Timeline"
         
         tableView.register(TimelineCell.self, forCellReuseIdentifier: TimelineCell.reuseIdentifier)
+        
+        view.addSubview(loadingView, constraints: [
+            loadingView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            loadingView.heightAnchor.constraint(equalTo: view.heightAnchor),
+            loadingView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loadingView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            ])
     }
     
     override func viewDidLoad() {
@@ -30,17 +42,46 @@ class TimelineViewController: UITableViewController, TimelineViewProtocol {
         presenter.loadTimeline()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        presenter.viewWillShow()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        presenter.viewWillHide()
+    }
+    
     // MARK: - Elements
     
     lazy var presenter: TimelinePresenterProtocol = TimelinePresenter(dependencies: (
         view: self,
         interactor: TimelineInteractor()
     ))
+    
+    // MARK: - UI
+    
+    lazy var loadingView = LoadingView()
 
     // MARK: - TimelineViewProtocol
     
+    func showLoading() {
+        loadingView.startAnimating()
+    }
+    
+    func hideLoading() {
+        loadingView.stopAnimating()
+    }
+    
     func showTimeline() {
         tableView.reloadData()
+    }
+    
+    func addTimeline(at indexes: [Int]) {
+        let indexPathes = indexes.map { IndexPath(row: $0, section: 0) }
+        tableView.insertRows(at: indexPathes, with: .automatic)
     }
     
     func showAlertTokenGetFailed() {
@@ -115,6 +156,13 @@ class TimelineViewController: UITableViewController, TimelineViewProtocol {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    
+    // MARK: - UIScrollViewDelegate
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard scrollView.contentSize.height - (scrollView.contentOffset.y + scrollView.frame.size.height) < 200.0 else { return }
+        presenter.findOldTweets()
     }
 }
 

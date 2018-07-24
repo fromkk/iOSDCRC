@@ -19,7 +19,7 @@ extension Twitter.Response {
     
     struct Status: Codable {
         var createdAt: Date
-        var id: Int
+        var id: Int64
         var text: String
         var user: Twitter.Response.User
         
