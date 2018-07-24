@@ -46,9 +46,9 @@ class TimelinePresenter: NSObject, TimelinePresenterProtocol {
         NotificationCenter.default.addObserver(self, selector: #selector(timerInactivateIfNeeded(with:)), name: Notification.Name.UIApplicationDidEnterBackground, object: nil)
     }
     
-    let keyword = "#linebootawards"
+    let keyword = "#iosdcrc"
     
-    let numberOfTweet: Int = 10
+    let numberOfTweet: Int = 30
     
     var accessToken: String?
     
