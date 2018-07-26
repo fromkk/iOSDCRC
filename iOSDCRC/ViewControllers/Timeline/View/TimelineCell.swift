@@ -86,7 +86,7 @@ final class TimelineCell: UITableViewCell, ReusableTableViewCell {
         label.textAlignment = .right
         label.numberOfLines = 1
         label.font = UIFont.systemFont(ofSize: 14, weight: .light)
-        label.textColor = #colorLiteral(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)
+        label.textColor = UIColor.rc.subText
         return label
     }()
     
@@ -95,7 +95,7 @@ final class TimelineCell: UITableViewCell, ReusableTableViewCell {
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
-        label.textColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
+        label.textColor = UIColor.rc.mainText
         return label
     }()
 }

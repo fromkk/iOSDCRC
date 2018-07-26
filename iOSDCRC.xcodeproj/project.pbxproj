@@ -33,6 +33,11 @@
 		AD65BB362106AD6E007BE9AF /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD65BB352106AD6E007BE9AF /* ImageLoader.swift */; };
 		AD65BB382106ADD6007BE9AF /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD65BB372106ADD6007BE9AF /* Cancellable.swift */; };
 		AD6B2A1A21056C95001B6C4E /* NSLayoutConstraint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6B2A1921056C95001B6C4E /* NSLayoutConstraint+Extensions.swift */; };
+		ADCC638F210957FB008481EC /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC638E210957FB008481EC /* AboutViewController.swift */; };
+		ADCC639121095807008481EC /* SpeakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC639021095807008481EC /* SpeakerViewController.swift */; };
+		ADCC639321095811008481EC /* SponsorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC639221095811008481EC /* SponsorViewController.swift */; };
+		ADCC639621095901008481EC /* AboutHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC639521095901008481EC /* AboutHeaderView.swift */; };
+		ADCC63992109595B008481EC /* UIColor+rc.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC63982109595B008481EC /* UIColor+rc.swift */; };
 		ADDAD31E21044EC300B1153E /* TimelineInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD31D21044EC300B1153E /* TimelineInteractor.swift */; };
 		ADDAD32121044F7B00B1153E /* TimelinePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD32021044F7B00B1153E /* TimelinePresenter.swift */; };
 		ADDAD3232104511400B1153E /* TwitterRequest+Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD3222104511400B1153E /* TwitterRequest+Token.swift */; };
@@ -179,6 +184,11 @@
 		AD65BB352106AD6E007BE9AF /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		AD65BB372106ADD6007BE9AF /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
 		AD6B2A1921056C95001B6C4E /* NSLayoutConstraint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Extensions.swift"; sourceTree = "<group>"; };
+		ADCC638E210957FB008481EC /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		ADCC639021095807008481EC /* SpeakerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerViewController.swift; sourceTree = "<group>"; };
+		ADCC639221095811008481EC /* SponsorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorViewController.swift; sourceTree = "<group>"; };
+		ADCC639521095901008481EC /* AboutHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutHeaderView.swift; sourceTree = "<group>"; };
+		ADCC63982109595B008481EC /* UIColor+rc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+rc.swift"; sourceTree = "<group>"; };
 		ADDAD31D21044EC300B1153E /* TimelineInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineInteractor.swift; sourceTree = "<group>"; };
 		ADDAD32021044F7B00B1153E /* TimelinePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelinePresenter.swift; sourceTree = "<group>"; };
 		ADDAD3222104511400B1153E /* TwitterRequest+Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TwitterRequest+Token.swift"; sourceTree = "<group>"; };
@@ -276,6 +286,7 @@
 		AD0042DD210734F50057AA83 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ADCC639721095927008481EC /* Atomic */,
 				AD0042DE2107350B0057AA83 /* LoadingView.swift */,
 			);
 			path = Views;
@@ -411,6 +422,22 @@
 			path = Supports;
 			sourceTree = "<group>";
 		};
+		ADCC6394210958EC008481EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ADCC639521095901008481EC /* AboutHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ADCC639721095927008481EC /* Atomic */ = {
+			isa = PBXGroup;
+			children = (
+				ADCC63982109595B008481EC /* UIColor+rc.swift */,
+			);
+			path = Atomic;
+			sourceTree = "<group>";
+		};
 		ADDAD3172104487F00B1153E /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +519,8 @@
 		ADDAD335210474C600B1153E /* About */ = {
 			isa = PBXGroup;
 			children = (
+				ADCC6394210958EC008481EC /* Views */,
+				ADCC638E210957FB008481EC /* AboutViewController.swift */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -511,6 +540,7 @@
 		ADDAD337210474E200B1153E /* Sponsor */ = {
 			isa = PBXGroup;
 			children = (
+				ADCC639221095811008481EC /* SponsorViewController.swift */,
 			);
 			path = Sponsor;
 			sourceTree = "<group>";
@@ -582,6 +612,7 @@
 		ADDAD34E21048DD100B1153E /* Speaker */ = {
 			isa = PBXGroup;
 			children = (
+				ADCC639021095807008481EC /* SpeakerViewController.swift */,
 			);
 			path = Speaker;
 			sourceTree = "<group>";
@@ -952,7 +983,10 @@
 				ADDAD38A2104A9F700B1153E /* TimetableViewController.swift in Sources */,
 				ADDAD31E21044EC300B1153E /* TimelineInteractor.swift in Sources */,
 				ADDAD33A21047B3600B1153E /* RootViewController.swift in Sources */,
+				ADCC639121095807008481EC /* SpeakerViewController.swift in Sources */,
+				ADCC639621095901008481EC /* AboutHeaderView.swift in Sources */,
 				AD5CBE952104195E00F32701 /* AppDelegate.swift in Sources */,
+				ADCC63992109595B008481EC /* UIColor+rc.swift in Sources */,
 				ADDAD3472104876F00B1153E /* RootWireframe.swift in Sources */,
 				ADDAD34D2104892000B1153E /* RootInteractor.swift in Sources */,
 				AD1449F121055CDA00E0BFAE /* TimelineCell.swift in Sources */,
@@ -973,11 +1007,13 @@
 				ADDAD33121045F8500B1153E /* TwitterResponse+Status.swift in Sources */,
 				ADDAD34B2104890600B1153E /* RootPresenter.swift in Sources */,
 				AD5CBEC821041C5600F32701 /* Constants.swift in Sources */,
+				ADCC638F210957FB008481EC /* AboutViewController.swift in Sources */,
 				ADDAD37E21049D4900B1153E /* TimesScrollView.swift in Sources */,
 				ADDAD349210487DF00B1153E /* RootEntity.swift in Sources */,
 				ADDAD32121044F7B00B1153E /* TimelinePresenter.swift in Sources */,
 				AD65BB362106AD6E007BE9AF /* ImageLoader.swift in Sources */,
 				ADDAD32F21045F3100B1153E /* TwitterResponse+User.swift in Sources */,
+				ADCC639321095811008481EC /* SponsorViewController.swift in Sources */,
 				ADDAD38021049D4900B1153E /* TimetableCell.swift in Sources */,
 				ADDAD32D21045EDB00B1153E /* TwitterResponse+Token.swift in Sources */,
 			);

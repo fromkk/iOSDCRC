@@ -139,12 +139,12 @@ class TimelineViewController: UITableViewController, TimelineViewProtocol {
     
     private func configure(_ cell: TimelineCell, and tweet: Twitter.Response.Status) {
         let name: NSMutableAttributedString = NSMutableAttributedString(string: tweet.user.name, attributes: [
-            .foregroundColor: #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1),
+            .foregroundColor: UIColor.rc.mainText,
             .font: UIFont.systemFont(ofSize: 16, weight: .medium)
             ])
         
         name.append(NSAttributedString(string: String(format: " @%@", tweet.user.screenName), attributes: [
-            .foregroundColor: #colorLiteral(red: 0.6, green: 0.6, blue: 0.6, alpha: 1),
+            .foregroundColor: UIColor.rc.subText,
             .font: UIFont.systemFont(ofSize: 14, weight: .light)
             ]))
         
@@ -155,7 +155,7 @@ class TimelineViewController: UITableViewController, TimelineViewProtocol {
         cell.tweetLabel.attributedText = NSAttributedString(string: tweet.text, attributes: [
             .paragraphStyle: style,
             .font: UIFont.systemFont(ofSize: 14, weight: .light),
-            .foregroundColor: #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
+            .foregroundColor: UIColor.rc.mainText
             ])
         cell.dateLabel.text = TweetDateConverter.convert(tweet.createdAt)
     }

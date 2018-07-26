@@ -91,7 +91,7 @@ class TimesScrollView: UIScrollView {
     private func makeLabel(with text: String) -> UILabel {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
-        label.textColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
+        label.textColor = UIColor.rc.mainText
         label.text = text
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping

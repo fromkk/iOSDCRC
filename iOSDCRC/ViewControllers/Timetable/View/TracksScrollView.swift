@@ -70,7 +70,7 @@ class TracksScrollView: UIScrollView {
         let label = UILabel()
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 16)
-        label.textColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
+        label.textColor = UIColor.rc.mainText
         label.text = text
         return label
     }

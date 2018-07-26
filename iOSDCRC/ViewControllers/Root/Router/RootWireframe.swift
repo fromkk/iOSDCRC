@@ -29,7 +29,8 @@ class RootWireframe: RootWireframeProtocol {
     }
     
     func about() {
-        // TODO: Implements
+        let aboutViewController = AboutViewController()
+        viewController.navigationController?.pushViewController(aboutViewController, animated: true)
     }
     
     func timeline() {
@@ -43,10 +44,12 @@ class RootWireframe: RootWireframeProtocol {
     }
     
     func speaker() {
-        // TODO: Implements
+        let speakerViewController = AboutViewController()
+        viewController.navigationController?.pushViewController(speakerViewController, animated: true)
     }
     
     func sponsor() {
-        // TODO: Implements
+        let sponsorViewController = AboutViewController()
+        viewController.navigationController?.pushViewController(sponsorViewController, animated: true)
     }
 }

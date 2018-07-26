@@ -23,7 +23,7 @@ class TimetableCell: UICollectionViewCell, ReusableCollectionViewCell {
     }
     
     private lazy var setUp: () -> () = {
-        contentView.backgroundColor = #colorLiteral(red: 0.9333333333, green: 0.9333333333, blue: 0.9333333333, alpha: 1)
+        contentView.backgroundColor = UIColor.rc.background
         
         contentView.addSubview(titleLabel, constraints: [
             titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
@@ -54,15 +54,15 @@ class TimetableCell: UICollectionViewCell, ReusableCollectionViewCell {
             
             let attributedString = NSMutableAttributedString(string: item.title, attributes: [
                 .font: UIFont.systemFont(ofSize: 16),
-                .foregroundColor: #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
+                .foregroundColor: UIColor.rc.mainText
                 ])
             attributedString.append(NSAttributedString(string: String(format: " %@", item.author), attributes: [
                 .font: UIFont.systemFont(ofSize: 16),
-                .foregroundColor: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+                .foregroundColor: UIColor.rc.link
                 ]))
             attributedString.append(NSAttributedString(string: String(format: " %@ - %@", item.startAt.toString(with: "HH:mm"), item.endAt.toString(with: "HH:mm")), attributes: [
                 .font: UIFont.systemFont(ofSize: 14),
-                .foregroundColor: #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+                .foregroundColor: UIColor.rc.subText
                 ]))
             titleLabel.attributedText = attributedString
         }

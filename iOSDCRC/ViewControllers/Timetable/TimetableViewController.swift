@@ -78,7 +78,7 @@ final class TimetableViewController: UIViewController, TimetableViewDataSource, 
     
     lazy var segmentedControl: UISegmentedControl = {
         let segmentedControl = UISegmentedControl()
-        segmentedControl.tintColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
+        segmentedControl.tintColor = UIColor.rc.mainText
         segmentedControl.backgroundColor = .white
         segmentedControl.addTarget(self, action: #selector(onChange(segmentedControl:)), for: .valueChanged)
         return segmentedControl
