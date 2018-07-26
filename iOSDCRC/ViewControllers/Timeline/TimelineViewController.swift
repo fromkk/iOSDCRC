@@ -11,16 +11,19 @@ import UIKit
 protocol TimelineViewProtocol: class {
     func showLoading()
     func hideLoading()
+    func showLoadingBottom()
+    func hideLoadingBottom()
     
     func showTimeline()
     func addTimeline(at indexes: [Int])
+    func updateDate()
     
     func showAlertTokenGetFailed()
     func showAlertTimelineGetFailed()
 }
 
 class TimelineViewController: UITableViewController, TimelineViewProtocol {
-
+    
     override func loadView() {
         super.loadView()
         
@@ -64,6 +67,8 @@ class TimelineViewController: UITableViewController, TimelineViewProtocol {
     // MARK: - UI
     
     lazy var loadingView = LoadingView()
+    
+    lazy var footerLoadingView: LoadingView = LoadingView(frame: CGRect(origin: .zero, size: CGSize(width: self.view.bounds.size.width, height: 44)))
 
     // MARK: - TimelineViewProtocol
     
@@ -75,13 +80,35 @@ class TimelineViewController: UITableViewController, TimelineViewProtocol {
         loadingView.stopAnimating()
     }
     
+    func showLoadingBottom() {
+        tableView.tableFooterView = footerLoadingView
+        footerLoadingView.startAnimating()
+    }
+    
+    func hideLoadingBottom() {
+        footerLoadingView.stopAnimating()
+        tableView.tableFooterView = nil
+    }
+    
     func showTimeline() {
         tableView.reloadData()
     }
     
     func addTimeline(at indexes: [Int]) {
         let indexPathes = indexes.map { IndexPath(row: $0, section: 0) }
-        tableView.insertRows(at: indexPathes, with: .automatic)
+        if indexes.contains(0) {
+            tableView.insertRows(at: indexPathes, with: .automatic)
+        } else {
+            tableView.insertRows(at: indexPathes, with: .bottom)
+        }
+    }
+    
+    func updateDate() {
+        (0..<presenter.numberOfTweets()).forEach { index in
+            let indexPath = IndexPath(row: index, section: 0)
+            guard let cell = tableView.cellForRow(at: indexPath) as? TimelineCell, let tweet = presenter.tweet(at: index) else { return }
+            cell.dateLabel.text = TweetDateConverter.convert(tweet.createdAt)
+        }
     }
     
     func showAlertTokenGetFailed() {

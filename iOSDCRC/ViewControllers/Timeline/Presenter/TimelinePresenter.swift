@@ -50,6 +50,8 @@ class TimelinePresenter: NSObject, TimelinePresenterProtocol {
     
     let numberOfTweet: Int = 30
     
+    let timeInterval: TimeInterval = 30
+    
     var accessToken: String?
     
     var isLoading: Bool = false
@@ -84,7 +86,7 @@ class TimelinePresenter: NSObject, TimelinePresenterProtocol {
             return
         }
         
-        timer = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(handleTimer), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: timeInterval, target: self, selector: #selector(handleTimer), userInfo: nil, repeats: true)
     }
     
     @objc func timerInactivateIfNeeded(with notification: Notification?) {
@@ -121,6 +123,7 @@ class TimelinePresenter: NSObject, TimelinePresenterProtocol {
         interactor.search(with: accessToken, andKeyword: keyword, count: numberOfTweet, sinceID: sinceID, maxID: nil) { [weak self] (tweets) in
             self?.tweets.insert(contentsOf: tweets, at: 0)
             self?.view.addTimeline(at: (0..<tweets.count).map { $0 })
+            self?.view.updateDate()
             self?.isLoading = false
         }
     }
@@ -133,6 +136,7 @@ class TimelinePresenter: NSObject, TimelinePresenterProtocol {
         }
         
         isLoading = true
+        view.showLoadingBottom()
         interactor.search(with: accessToken, andKeyword: keyword, count: numberOfTweet, sinceID: nil, maxID: maxID - 1) { [weak self] (tweets) in
             guard let _self = self else { return }
             
@@ -142,6 +146,7 @@ class TimelinePresenter: NSObject, TimelinePresenterProtocol {
             _self.tweets.append(contentsOf: tweets)
             
             _self.view.addTimeline(at: indexes)
+            _self.view.hideLoadingBottom()
             _self.isLoading = false
         }
     }
