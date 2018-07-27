@@ -8,20 +8,6 @@
 
 import UIKit
 
-protocol TimelineViewProtocol: class {
-    func showLoading()
-    func hideLoading()
-    func showLoadingBottom()
-    func hideLoadingBottom()
-    
-    func showTimeline()
-    func addTimeline(at indexes: [Int])
-    func updateDate()
-    
-    func showAlertTokenGetFailed()
-    func showAlertTimelineGetFailed()
-}
-
 class TimelineViewController: UITableViewController, TimelineViewProtocol {
     
     override func loadView() {

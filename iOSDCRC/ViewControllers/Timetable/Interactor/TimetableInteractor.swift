@@ -8,10 +8,6 @@
 
 import Foundation
 
-protocol TimetableInteractorProtocol {
-    func events(_ completion: @escaping ([Event]) -> ())
-}
-
 class TimetableInteractor: TimetableInteractorProtocol {
     func events(_ completion: @escaping ([Event]) -> ()) {
         guard let path = Bundle.main.path(forResource: "iosdcrc", ofType: "json") else {

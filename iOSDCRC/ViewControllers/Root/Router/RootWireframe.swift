@@ -8,20 +8,6 @@
 
 import UIKit
 
-protocol RootWireframeProtocol {
-    init(viewController: UIViewController)
-    
-    func about()
-    
-    func timeline()
-    
-    func timetable()
-    
-    func speaker()
-    
-    func sponsor()
-}
-
 class RootWireframe: RootWireframeProtocol {
     unowned var viewController: UIViewController
     required init(viewController: UIViewController) {
@@ -41,15 +27,5 @@ class RootWireframe: RootWireframeProtocol {
     func timetable() {
         let timetableViewController = TimetableViewController()
         viewController.navigationController?.pushViewController(timetableViewController, animated: true)
-    }
-    
-    func speaker() {
-        let speakerViewController = AboutViewController()
-        viewController.navigationController?.pushViewController(speakerViewController, animated: true)
-    }
-    
-    func sponsor() {
-        let sponsorViewController = AboutViewController()
-        viewController.navigationController?.pushViewController(sponsorViewController, animated: true)
     }
 }

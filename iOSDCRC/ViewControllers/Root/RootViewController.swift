@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol RootViewProtocol: class {
-    func showMenu()
-}
-
 final class RootViewController: UITableViewController, RootViewProtocol {
     
     private let reuseIdentifier: String = "Cell"

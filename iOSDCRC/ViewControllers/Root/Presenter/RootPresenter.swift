@@ -8,26 +8,6 @@
 
 import Foundation
 
-protocol RootPresenterProtocol: class {
-    typealias Menu = RootEntity
-    
-    typealias Dependencies = (
-        view: RootViewProtocol,
-        interactor: RootInteractorProtocol,
-        router: RootWireframeProtocol
-    )
-    
-    init(dependencies: Dependencies)
-    
-    func loadMenu()
-    
-    func numberOfMenus() -> Int
-    
-    func menu(at index: Int) -> Menu?
-    
-    func select(at index: Int)
-}
-
 class RootPresenter: RootPresenterProtocol {
     unowned var view: RootViewProtocol
     var interactor: RootInteractorProtocol
@@ -66,10 +46,6 @@ class RootPresenter: RootPresenterProtocol {
             router.timetable()
         case .timeline:
             router.timeline()
-        case .speaker:
-            router.speaker()
-        case .sponsor:
-            router.sponsor()
         }
     }
 }

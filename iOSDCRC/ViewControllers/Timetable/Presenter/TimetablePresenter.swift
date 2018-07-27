@@ -8,24 +8,6 @@
 
 import Foundation
 
-protocol TimetablePresenterProtocol: class {
-    typealias Dependencies = (
-        view: TimetableViewpProtocol,
-        interactor: TimetableInteractorProtocol
-    )
-    init(dependencies: Dependencies)
-    
-    func loadEvents()
-    
-    func numberOfEvents() -> Int
-    
-    func event(at index: Int) -> Event?
-    
-    var currentEvent: Event? { get }
-    
-    func selectEvent(at index: Int)
-}
-
 class TimetablePresenter: TimetablePresenterProtocol {
     unowned var view: TimetableViewpProtocol
     var interactor: TimetableInteractorProtocol

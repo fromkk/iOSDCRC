@@ -12,8 +12,6 @@ enum RootEntity {
     case about
     case timetable
     case timeline
-    case speaker
-    case sponsor
     
     func toString() -> String {
         switch self {
@@ -23,12 +21,8 @@ enum RootEntity {
             return "Timetable"
         case .timeline:
             return "Timeline"
-        case .speaker:
-            return "Speaker"
-        case .sponsor:
-            return "Sponsor"
         }
     }
     
-    static let allCases: [RootEntity] = [.about, .timetable, .timeline, .speaker, .sponsor]
+    static let allCases: [RootEntity] = [.about, .timetable, .timeline]
 }

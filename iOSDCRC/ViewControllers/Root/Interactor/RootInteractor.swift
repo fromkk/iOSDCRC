@@ -8,10 +8,6 @@
 
 import Foundation
 
-protocol RootInteractorProtocol {
-    func menu(completion: @escaping ([RootEntity]) -> ())
-}
-
 class RootInteractor: RootInteractorProtocol {
     func menu(completion: @escaping ([RootEntity]) -> ()) {
         completion(RootEntity.allCases)

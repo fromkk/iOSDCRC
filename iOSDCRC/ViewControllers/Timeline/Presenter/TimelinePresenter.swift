@@ -8,30 +8,6 @@
 
 import Foundation
 
-protocol TimelinePresenterProtocol: class {
-    typealias Tweet = Twitter.Response.Status
-    
-    typealias Dependencies = (
-        view: TimelineViewProtocol,
-        interactor: TimelineInteractorProtocol
-    )
-    init(dependencies: Dependencies)
-    
-    func loadTimeline()
-    
-    func findNewTweets()
-    
-    func findOldTweets()
-    
-    func viewWillShow()
-    
-    func viewWillHide()
-    
-    func numberOfTweets() -> Int
-    
-    func tweet(at index: Int) -> Tweet?
-}
-
 class TimelinePresenter: NSObject, TimelinePresenterProtocol {
     unowned var view: TimelineViewProtocol
     var interactor: TimelineInteractorProtocol

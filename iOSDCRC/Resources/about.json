@@ -1,0 +1,142 @@
+{
+    "dates": [
+        {
+            "from": "2018-09-18T19:00:00+09:00",
+            "to": "2018-09-18T22:00:00+09:00"
+        },
+        {
+            "from": "2018-09-20T19:00:00+09:00",
+            "to": "2018-09-20T22:00:00+09:00"
+        }
+    ],
+    "locations": [
+        {
+            "name": "DeNA渋谷 ヒカリエ オフィス",
+            "postal_code": "150-8510",
+            "address": "東京都渋谷区渋谷2-21-1"
+        },
+        {
+            "name": "LINE Fukuoka",
+            "postal_code": "812-0012",
+            "address": "福岡県福岡市博多区博多駅中央街8-1 JRJP博多ビル12F"
+        }
+    ],
+    "sponsors": [
+        {
+            "name": "株式会社ディー・エヌ・エー",
+            "description": "会場提供・Day 1懇親会費用提供・配信設備提供"
+        },
+        {
+            "name": "株式会社リクルート",
+            "description": "Day 2懇親会費用提供"
+        }
+    ],
+    "speakers": [
+        {
+            "account": "giginet",
+            "name": "ぎぎにゃん"
+        },
+        {
+            "account": "fumiyasac",
+            "name": "fumiyasac"
+        },
+        {
+            "account": "lovee",
+            "name": "lovee"
+        },
+        {
+            "account": "takattata",
+            "name": "Takasy"
+        },
+        {
+            "account": "yshogo87",
+            "name": "shogo.yamada"
+        },
+        {
+            "account": "nonchalant0303",
+            "name": "Nonchalant"
+        },
+        {
+            "account": "_mogaming",
+            "name": "mogaming"
+        },
+        {
+            "account": "naruchigi",
+            "name": "Naruki Chigira"
+        },
+        {
+            "account": "vespid",
+            "name": "みつよし"
+        },
+        {
+            "account": "swiz_ard",
+            "name": "Kubode"
+        },
+        {
+            "account": "kazuhiro494949",
+            "name": "kazuhiro4949"
+        },
+        {
+            "account": "kz56cd",
+            "name": "kz56cd"
+        },
+        {
+            "account": "fumito_ito",
+            "name": "Fumito Ito"
+        },
+        {
+            "account": "takehilo_kaneko",
+            "name": "takehilo"
+        }
+    ],
+    "staffs": [
+        {
+            "account": "akatsuki174",
+            "name": "akatsuki174"
+        },
+        {
+            "account": "fromkk",
+            "name": "かっくん"
+        },
+        {
+            "account": "nesskazu",
+            "name": "NESS"
+        },
+        {
+            "account": "ukitaka_",
+            "name": "ukitaka"
+        },
+        {
+            "account": "gaopin1534",
+            "name": "gaopin"
+        },
+        {
+            "account": "_ha1f",
+            "name": "はるふの葉の庭"
+        },
+        {
+            "account": "itaru_sugimoto",
+            "name": "いたる"
+        },
+        {
+            "account": "kiko_tw",
+            "name": "kiko"
+        },
+        {
+            "account": "macneko_ayu",
+            "name": "こうちゃん黒猫まみれ"
+        },
+        {
+            "account": "mizu_gako",
+            "name": "トントン ランラン☆ガーコ"
+        },
+        {
+            "account": "niwatako",
+            "name": "にわタコ"
+        },
+        {
+            "account": "takattata",
+            "name": "Takasy"
+        }
+    ]
+}

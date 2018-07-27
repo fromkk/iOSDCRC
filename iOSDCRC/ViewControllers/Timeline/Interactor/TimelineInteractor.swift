@@ -9,11 +9,6 @@
 import Foundation
 import API
 
-protocol TimelineInteractorProtocol {
-    func token(with consumerKey: String, and consumerSecret: String, completion: @escaping (String?) -> ())
-    func search(with accessToken: String, andKeyword keyword: String, count: Int, sinceID: Int64?, maxID: Int64?, completion: @escaping ([Twitter.Response.Status]) -> ())
-}
-
 class TimelineInteractor: TimelineInteractorProtocol {
     func token(with consumerKey: String, and consumerSecret: String, completion: @escaping (String?) -> ()) {
         let token = Twitter.Request.Token(consumerKey: consumerKey, consumerSecret: consumerSecret)

@@ -9,11 +9,6 @@
 import UIKit
 import TimetableView
 
-protocol TimetableViewpProtocol: class {
-    func showEvents()
-    func updateEvent()
-}
-
 final class TimetableViewController: UIViewController, TimetableViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, TimetableViewpProtocol {
     
     let heightOfHour: CGFloat = 600
