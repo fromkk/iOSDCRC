@@ -17,6 +17,7 @@ final class RootViewController: UITableViewController, RootViewProtocol {
         
         title = "iOSDCRC 2018"
         tableView.tableHeaderView = logoView
+        tableView.tableFooterView = footerView
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
     }
     
@@ -63,7 +64,13 @@ final class RootViewController: UITableViewController, RootViewProtocol {
     
     // MARK: - UI
     
-    lazy var logoView: RootLogoView = RootLogoView(frame: CGRect(origin: .zero, size: CGSize(width: 320, height: 200)))
+    lazy var logoView: RootLogoView = RootLogoView(frame: CGRect(origin: .zero, size: CGSize(width: self.view.frame.size.width, height: 200)))
+    
+    lazy var footerView: RootFooterView = {
+        let footerView = RootFooterView(frame: CGRect(origin: .zero, size: CGSize(width: self.view.frame.size.width, height: 44)))
+        footerView.copyLabel.text = "(C) iOSDC Reject Conference 2018"
+        return footerView
+    }()
     
     // MARK: - RootViewProtocol
     

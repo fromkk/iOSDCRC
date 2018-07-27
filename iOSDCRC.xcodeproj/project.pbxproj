@@ -46,6 +46,7 @@
 		AD908678210AA96C00CD35BB /* AboutSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD908677210AA96C00CD35BB /* AboutSectionHeaderView.swift */; };
 		ADCC638F210957FB008481EC /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC638E210957FB008481EC /* AboutViewController.swift */; };
 		ADCC63992109595B008481EC /* UIColor+rc.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCC63982109595B008481EC /* UIColor+rc.swift */; };
+		ADCF5576210AFFB400D39911 /* RootFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCF5575210AFFB400D39911 /* RootFooterView.swift */; };
 		ADDAD31E21044EC300B1153E /* TimelineInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD31D21044EC300B1153E /* TimelineInteractor.swift */; };
 		ADDAD32121044F7B00B1153E /* TimelinePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD32021044F7B00B1153E /* TimelinePresenter.swift */; };
 		ADDAD3232104511400B1153E /* TwitterRequest+Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD3222104511400B1153E /* TwitterRequest+Token.swift */; };
@@ -205,6 +206,7 @@
 		AD908677210AA96C00CD35BB /* AboutSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSectionHeaderView.swift; sourceTree = "<group>"; };
 		ADCC638E210957FB008481EC /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		ADCC63982109595B008481EC /* UIColor+rc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+rc.swift"; sourceTree = "<group>"; };
+		ADCF5575210AFFB400D39911 /* RootFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFooterView.swift; sourceTree = "<group>"; };
 		ADDAD31D21044EC300B1153E /* TimelineInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineInteractor.swift; sourceTree = "<group>"; };
 		ADDAD32021044F7B00B1153E /* TimelinePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelinePresenter.swift; sourceTree = "<group>"; };
 		ADDAD3222104511400B1153E /* TwitterRequest+Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TwitterRequest+Token.swift"; sourceTree = "<group>"; };
@@ -644,6 +646,7 @@
 			isa = PBXGroup;
 			children = (
 				ADDAD3402104851100B1153E /* RootLogoView.swift */,
+				ADCF5575210AFFB400D39911 /* RootFooterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1070,6 +1073,7 @@
 				ADDAD37F21049D4900B1153E /* TracksScrollView.swift in Sources */,
 				ADDAD3912104AEC500B1153E /* TimetableInteractor.swift in Sources */,
 				ADDAD38321049DA600B1153E /* Reusable.swift in Sources */,
+				ADCF5576210AFFB400D39911 /* RootFooterView.swift in Sources */,
 				AD90866B210AA32E00CD35BB /* AboutInterfaces.swift in Sources */,
 				ADDAD33121045F8500B1153E /* TwitterResponse+Status.swift in Sources */,
 				ADDAD34B2104890600B1153E /* RootPresenter.swift in Sources */,
