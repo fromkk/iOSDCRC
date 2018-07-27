@@ -11,9 +11,9 @@ import TimetableView
 
 final class TimetableViewController: UIViewController, TimetableViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, TimetableViewpProtocol {
     
-    let heightOfHour: CGFloat = 600
+    let heightOfHour: CGFloat = 800
     
-    let itemWidth: CGFloat = 200
+    let itemWidth: CGFloat = 240
     
     override func loadView() {
         super.loadView()
