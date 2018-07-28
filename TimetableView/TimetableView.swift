@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// タイムテーブルを表現するクラス
 open class TimetableView: UICollectionView, UICollectionViewDataSource {
     
     public var configuration: TimetableViewConfiguration {

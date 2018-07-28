@@ -9,6 +9,8 @@
 import Foundation
 
 extension Twitter.Response {
+    
+    /// アクセストークンのレスポンス
     struct Token: Codable {
         let tokenType: String
         let accessToken: String

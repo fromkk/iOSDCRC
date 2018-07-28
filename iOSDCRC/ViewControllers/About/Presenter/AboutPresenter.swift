@@ -66,12 +66,12 @@ class AboutPresenter: AboutPresenterProtocol {
         return sponsors[index]
     }
     
-    func speaker(at index: Int) -> AboutEntity.TwitterAccount? {
+    func speaker(at index: Int) -> Speaker? {
         guard let speakers = aboutEntity?.speakers, index < speakers.count else { return nil }
         return speakers[index]
     }
     
-    func staff(at index: Int) -> AboutEntity.TwitterAccount? {
+    func staff(at index: Int) -> Staff? {
         guard let staffs = aboutEntity?.staffs, index < staffs.count else { return nil }
         return staffs[index]
     }

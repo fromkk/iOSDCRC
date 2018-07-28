@@ -9,6 +9,8 @@
 import Foundation
 
 extension Twitter.Response {
+    
+    /// 投稿
     struct Statuses: Codable {
         var statuses: [Status]
         

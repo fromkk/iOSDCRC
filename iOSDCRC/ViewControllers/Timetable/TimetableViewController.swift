@@ -9,6 +9,7 @@
 import UIKit
 import TimetableView
 
+/// タイムテーブルを表示する
 final class TimetableViewController: UIViewController, TimetableViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, TimetableViewpProtocol {
     
     let heightOfHour: CGFloat = 800

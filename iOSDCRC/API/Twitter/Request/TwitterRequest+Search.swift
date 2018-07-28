@@ -10,6 +10,8 @@ import Foundation
 import API
 
 extension Twitter.Request {
+    
+    /// 検索APIを叩く
     struct Search: TwitterAuthorizedRequestable {
         init(accessToken: String, q: String, count: Int = 100, sinceID: Int64? = nil, maxID: Int64? = nil) {
             self.accessToken = accessToken

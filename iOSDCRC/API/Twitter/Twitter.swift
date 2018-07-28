@@ -9,6 +9,7 @@
 import Foundation
 import API
 
+/// Twitter APIとの接続を賄う
 struct Twitter {}
 
 extension Twitter {

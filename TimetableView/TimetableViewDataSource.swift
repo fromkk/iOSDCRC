@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// タイムテーブルを表示するのに必要な情報
 public protocol TimetableViewDataSource: class {
     func numberOfSections(in timetableView: TimetableView) -> Int
     func timetableView(_ timetableView: TimetableView, numberOfItemsIn section: Int) -> Int

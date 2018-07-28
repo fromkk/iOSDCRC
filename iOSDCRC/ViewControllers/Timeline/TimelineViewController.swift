@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Twitterのタイムラインを表示
 class TimelineViewController: UITableViewController, TimelineViewProtocol {
     
     override func loadView() {

@@ -9,6 +9,8 @@
 import UIKit
 
 extension UIColor {
+    
+    /// 色情報を定義
     struct RC {
         let mainText: UIColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
         let subText: UIColor = #colorLiteral(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)

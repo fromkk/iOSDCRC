@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// トップページ
 final class RootViewController: UITableViewController, RootViewProtocol {
     
     private let reuseIdentifier: String = "Cell"

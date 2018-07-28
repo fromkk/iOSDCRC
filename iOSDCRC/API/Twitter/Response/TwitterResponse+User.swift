@@ -9,6 +9,8 @@
 import Foundation
 
 extension Twitter.Response {
+    
+    /// ユーザー情報
     struct User: Codable {
         var id: Int
         var name: String

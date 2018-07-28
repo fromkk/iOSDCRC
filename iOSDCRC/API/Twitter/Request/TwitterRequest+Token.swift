@@ -10,6 +10,8 @@ import Foundation
 import API
 
 extension Twitter.Request {
+    
+    /// アクセストークンを取得する
     struct Token: TwitterRequestable {
         var path: String = "oauth2/token"
         

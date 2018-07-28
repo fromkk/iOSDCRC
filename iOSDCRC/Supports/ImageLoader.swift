@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// URLから画像を読み込むためのクラス
 class ImageLoader {
     enum Errors: Error {
         case convertFailed
