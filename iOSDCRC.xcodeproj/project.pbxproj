@@ -244,6 +244,7 @@
 		ADDAD3902104AEC500B1153E /* TimetableInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableInteractor.swift; sourceTree = "<group>"; };
 		ADDAD3922104AEF200B1153E /* iosdcrc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = iosdcrc.json; sourceTree = "<group>"; };
 		ADF4B14A210C597F00BA2FDC /* Localizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizations.swift; sourceTree = "<group>"; };
+		ADF4B14C210C5EAA00BA2FDC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +324,7 @@
 		AD5CBE882104195E00F32701 = {
 			isa = PBXGroup;
 			children = (
+				ADF4B14C210C5EAA00BA2FDC /* README.md */,
 				AD5CBE932104195E00F32701 /* iOSDCRC */,
 				AD5CBEA82104196200F32701 /* iOSDCRCTests */,
 				AD5CBEB32104196200F32701 /* iOSDCRCUITests */,
