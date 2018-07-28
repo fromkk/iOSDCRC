@@ -99,11 +99,15 @@ class TimelineViewController: UITableViewController, TimelineViewProtocol {
     }
     
     func showAlertTokenGetFailed() {
-        debugPrint(#function)
+        let alertController = UIAlertController(title: Localizations.Timeline.Alert.AccessTokenGetFailed.title.localize(), message: Localizations.Timeline.Alert.AccessTokenGetFailed.message.localize(), preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: Localizations.General.ok.localize(), style: .default, handler: nil))
+        present(alertController, animated: true)
     }
     
     func showAlertTimelineGetFailed() {
-        debugPrint(#function)
+        let alertController = UIAlertController(title: Localizations.Timeline.Alert.TweetGetFailed.title.localize(), message: Localizations.Timeline.Alert.TweetGetFailed.message.localize(), preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: Localizations.General.ok.localize(), style: .default, handler: nil))
+        present(alertController, animated: true)
     }
 
     // MARK: - UITableViewDataSource

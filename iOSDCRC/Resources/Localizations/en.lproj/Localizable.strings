@@ -6,6 +6,8 @@
   Copyright © 2018 Kazuya Ueoka. All rights reserved.
 */
 
+"General.OK" = "OK";
+
 "Tweet.Date.Seconds" = "s";
 
 "Tweet.Date.Minutes" = "m";
@@ -13,3 +15,11 @@
 "Tweet.Date.Hour" = "h";
 
 "Tweet.Date.Day" = "d";
+
+"Timeline.Alert.TokenGetFailed.Title" = "Error";
+
+"Timeline.Alert.TokenGetFailed.Message" = "Token get failed.";
+
+"Timeline.Alert.TweetGetFailed.Title" = "Error";
+
+"Timeline.Alert.TweetGetFailed.Message" = "Tweet get failed.";

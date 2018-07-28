@@ -14,6 +14,7 @@ class TimelineInteractor: TimelineInteractorProtocol {
         let token = Twitter.Request.Token(consumerKey: consumerKey, consumerSecret: consumerSecret)
         Session.json(with: token, and: Twitter.Response.Token.self) { (result, error) in
             guard let result = result else {
+                completion(nil)
                 return
             }
             

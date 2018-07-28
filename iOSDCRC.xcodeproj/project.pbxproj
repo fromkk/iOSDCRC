@@ -81,6 +81,7 @@
 		ADDAD38F2104AEBE00B1153E /* TimetablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD38E2104AEBE00B1153E /* TimetablePresenter.swift */; };
 		ADDAD3912104AEC500B1153E /* TimetableInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD3902104AEC500B1153E /* TimetableInteractor.swift */; };
 		ADDAD3932104AEF300B1153E /* iosdcrc.json in Resources */ = {isa = PBXBuildFile; fileRef = ADDAD3922104AEF200B1153E /* iosdcrc.json */; };
+		ADF4B14B210C597F00BA2FDC /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF4B14A210C597F00BA2FDC /* Localizations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -242,6 +243,7 @@
 		ADDAD38E2104AEBE00B1153E /* TimetablePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetablePresenter.swift; sourceTree = "<group>"; };
 		ADDAD3902104AEC500B1153E /* TimetableInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableInteractor.swift; sourceTree = "<group>"; };
 		ADDAD3922104AEF200B1153E /* iosdcrc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = iosdcrc.json; sourceTree = "<group>"; };
+		ADF4B14A210C597F00BA2FDC /* Localizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -436,6 +438,7 @@
 			children = (
 				AD65BB352106AD6E007BE9AF /* ImageLoader.swift */,
 				AD65BB372106ADD6007BE9AF /* Cancellable.swift */,
+				ADF4B14A210C597F00BA2FDC /* Localizations.swift */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -1050,6 +1053,7 @@
 				ADDAD3412104851100B1153E /* RootLogoView.swift in Sources */,
 				ADDAD38A2104A9F700B1153E /* TimetableViewController.swift in Sources */,
 				AD90866E210AA46500CD35BB /* AboutPresenter.swift in Sources */,
+				ADF4B14B210C597F00BA2FDC /* Localizations.swift in Sources */,
 				ADDAD31E21044EC300B1153E /* TimelineInteractor.swift in Sources */,
 				ADDAD33A21047B3600B1153E /* RootViewController.swift in Sources */,
 				AD5CBE952104195E00F32701 /* AppDelegate.swift in Sources */,
