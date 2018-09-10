@@ -17,7 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Create RootViewController
         let rootViewController = RootViewController(style: .plain)
-        let rootPresenter: RootPresenterProtocol = RootPresenter(dependencies: (view: rootViewController, interactor: RootInteractor(), router: RootWireframe(viewController: rootViewController)))
+        
+        let view = rootViewController
+        let interactor = RootInteractor()
+        let router = RootWireframe(viewController: rootViewController)
+        
+        let rootPresenter: RootPresenterProtocol = RootPresenter(dependencies:
+            (
+                view: view,
+                interactor: interactor,
+                router: router
+            )
+        )
         rootViewController.inject(dependency: rootPresenter)
         
         let navigationController = UINavigationController(rootViewController: rootViewController)
