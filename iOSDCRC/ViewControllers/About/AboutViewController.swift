@@ -13,9 +13,9 @@ final class AboutViewController: UITableViewController, AboutViewProtocol, Injec
     // MARK: - Dependency
     
     typealias Dependency = AboutPresenterProtocol
-    var presenter: AboutPresenterProtocol!
+    private var presenter: AboutPresenterProtocol!
     func inject(dependency: AboutPresenterProtocol) {
-        self.presenter = dependency
+        presenter = dependency
     }
     
     override func loadView() {

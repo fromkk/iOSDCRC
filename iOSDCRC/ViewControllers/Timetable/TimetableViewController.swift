@@ -15,9 +15,9 @@ final class TimetableViewController: UIViewController, TimetableViewDataSource, 
     // MARK: - Dependency
     
     typealias Dependency = TimetablePresenterProtocol
-    var presenter: TimetablePresenterProtocol!
+    private var presenter: TimetablePresenterProtocol!
     func inject(dependency: TimetablePresenterProtocol) {
-        self.presenter = dependency
+        presenter = dependency
     }
     
     // MARK: - Constants

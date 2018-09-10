@@ -16,9 +16,9 @@ final class RootViewController: UITableViewController, RootViewProtocol, Injecta
     // MARK: - Dependency
     
     typealias Dependency = RootPresenterProtocol
-    var presenter: RootPresenterProtocol!
+    private var presenter: RootPresenterProtocol!
     func inject(dependency: RootPresenterProtocol) {
-        self.presenter = dependency
+        presenter = dependency
     }
     
     // MARK: - lifecycle

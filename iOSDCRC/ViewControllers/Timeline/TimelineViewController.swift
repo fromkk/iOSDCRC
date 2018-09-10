@@ -14,9 +14,9 @@ class TimelineViewController: UITableViewController, TimelineViewProtocol, Injec
     // MARK: - Dependency
     
     typealias Dependency = TimelinePresenterProtocol
-    var presenter: TimelinePresenterProtocol!
+    private var presenter: TimelinePresenterProtocol!
     func inject(dependency: TimelinePresenterProtocol) {
-        self.presenter = dependency
+        presenter = dependency
     }
     
     // MARK: - lifecycle
