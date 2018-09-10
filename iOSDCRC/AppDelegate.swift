@@ -15,7 +15,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        // Create RootViewController
         let rootViewController = RootViewController(style: .plain)
+        
+        let view = rootViewController
+        let interactor = RootInteractor()
+        let router = RootWireframe(viewController: rootViewController)
+        
+        let rootPresenter: RootPresenterProtocol = RootPresenter(dependencies:
+            (
+                view: view,
+                interactor: interactor,
+                router: router
+            )
+        )
+        rootViewController.inject(dependency: rootPresenter)
+        
         let navigationController = UINavigationController(rootViewController: rootViewController)
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.rootViewController = navigationController

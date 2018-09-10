@@ -9,9 +9,19 @@
 import UIKit
 
 /// トップページ
-final class RootViewController: UITableViewController, RootViewProtocol {
+final class RootViewController: UITableViewController, RootViewProtocol, Injectable {
     
     private let reuseIdentifier: String = "Cell"
+    
+    // MARK: - Dependency
+    
+    typealias Dependency = RootPresenterProtocol
+    private var presenter: RootPresenterProtocol!
+    func inject(dependency: RootPresenterProtocol) {
+        presenter = dependency
+    }
+    
+    // MARK: - lifecycle
     
     override func loadView() {
         super.loadView()
@@ -54,14 +64,6 @@ final class RootViewController: UITableViewController, RootViewProtocol {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter.select(at: indexPath.row)
     }
-    
-    // MARK: - Elements
-    
-    lazy var presenter: RootPresenterProtocol = RootPresenter(dependencies: (
-        view: self,
-        interactor: RootInteractor(),
-        router: RootWireframe(viewController: self)
-    ))
     
     // MARK: - UI
     
