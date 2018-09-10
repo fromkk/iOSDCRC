@@ -110,7 +110,7 @@ final class AboutViewController: UITableViewController, AboutViewProtocol {
             .font: UIFont.systemFont(ofSize: 16, weight: .medium)
             ])
         
-        attributedText.append(NSAttributedString(string: String(format: " @%@", twitterAccount.account), attributes: [
+        attributedText.append(NSAttributedString(string: String(format: " %@", twitterAccount.account), attributes: [
             .foregroundColor: UIColor.rc.subText,
             .font: UIFont.systemFont(ofSize: 14, weight: .light)
             ]))
