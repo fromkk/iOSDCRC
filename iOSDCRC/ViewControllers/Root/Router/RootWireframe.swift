@@ -16,16 +16,22 @@ class RootWireframe: RootWireframeProtocol {
     
     func about() {
         let aboutViewController = AboutViewController()
+        let presenter = AboutPresenter(dependencies: (view: aboutViewController, interactor: AboutInteractor()))
+        aboutViewController.inject(dependency: presenter)
         viewController.navigationController?.pushViewController(aboutViewController, animated: true)
     }
     
     func timeline() {
         let timelineViewController = TimelineViewController()
+        let presenter = TimelinePresenter(dependencies: (view: timelineViewController, interactor: TimelineInteractor()))
+        timelineViewController.inject(dependency: presenter)
         viewController.navigationController?.pushViewController(timelineViewController, animated: true)
     }
     
     func timetable() {
         let timetableViewController = TimetableViewController()
+        let presenter = TimetablePresenter(dependencies: (view: timetableViewController, interactor: TimetableInteractor()))
+        timetableViewController.inject(dependency: presenter)
         viewController.navigationController?.pushViewController(timetableViewController, animated: true)
     }
 }

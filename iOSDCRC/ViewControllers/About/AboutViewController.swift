@@ -8,7 +8,15 @@
 
 import UIKit
 
-final class AboutViewController: UITableViewController, AboutViewProtocol {
+final class AboutViewController: UITableViewController, AboutViewProtocol, Injectable {
+    
+    // MARK: - Dependency
+    
+    typealias Dependency = AboutPresenterProtocol
+    var presenter: AboutPresenterProtocol!
+    func inject(dependency: AboutPresenterProtocol) {
+        self.presenter = dependency
+    }
     
     override func loadView() {
         super.loadView()
@@ -20,8 +28,6 @@ final class AboutViewController: UITableViewController, AboutViewProtocol {
         
         presenter.loadAbout()
     }
-    
-    lazy var presenter: AboutPresenterProtocol = AboutPresenter(dependencies: (view: self, interactor: AboutInteractor()))
     
     // MARK: - UITableViewDataSource
     

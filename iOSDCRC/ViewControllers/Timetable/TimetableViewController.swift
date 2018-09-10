@@ -10,11 +10,23 @@ import UIKit
 import TimetableView
 
 /// タイムテーブルを表示する
-final class TimetableViewController: UIViewController, TimetableViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, TimetableViewpProtocol {
+final class TimetableViewController: UIViewController, TimetableViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, TimetableViewpProtocol, Injectable {
+    
+    // MARK: - Dependency
+    
+    typealias Dependency = TimetablePresenterProtocol
+    var presenter: TimetablePresenterProtocol!
+    func inject(dependency: TimetablePresenterProtocol) {
+        self.presenter = dependency
+    }
+    
+    // MARK: - Constants
     
     let heightOfHour: CGFloat = 800
     
     let itemWidth: CGFloat = 240
+    
+    // MARK: - lifecycle
     
     override func loadView() {
         super.loadView()
@@ -62,13 +74,6 @@ final class TimetableViewController: UIViewController, TimetableViewDataSource, 
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    // MARK: - Elements
-    
-    lazy var presenter: TimetablePresenterProtocol = TimetablePresenter(dependencies: (
-        view: self,
-        interactor: TimetableInteractor()
-    ))
     
     // MARK: - UI
     
