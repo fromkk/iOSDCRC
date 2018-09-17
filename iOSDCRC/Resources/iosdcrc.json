@@ -11,6 +11,7 @@
             {
               "title": "DDD(ドメイン駆動設計)を知っていますか？？",
               "description": "DDDを学んだことはありますか？\nレイヤー化アーキテクチャとかの話でしょ？と思っていませんか？\nDDDは小手先で行うものではなく、仕組みを作っていくことが主です。\nDDDを学び実践することで、チーム各員の意識が変わり、今のプロダクトが整理されていくはずです。\nそんなDDDへの入り口を開くセッションに出来ればと思います。",
+              "url": "https://fortee.jp/iosdc-japan-2018/proposal/0d1a261a-a268-4d82-af16-a2a9b357b2bc",
               "author": "@takattata",
               "start_at": "2018-09-18T19:30:00+09:00",
               "end_at": "2018-09-18T20:00:00+09:00"
@@ -18,6 +19,7 @@
             {
               "title": "エンジニア経験を活かしたスクラムマスターとして開発チームとプロダクトを成長させる",
               "description": "スクラムに関する情報と書籍は世の中に溢れています。もし、間違った解釈によってエンジニアがより少ない情報・短い時間での開発を強いられるとしたら、改善をする必要があります。このトークでは、スクラムの原論文と言われる&quot;The New New Product Development Game&quot;を読み解き、エンジニアの成長を促すような環境と組織に利益をもたらす開発の両立を目指すための活動について話します。",
+              "url": "https://fortee.jp/iosdc-japan-2018/proposal/3cc0e52b-1aa2-431b-a215-960bbe64f4b3",
               "author": "@naruchigi",
               "start_at": "2018-09-18T20:10:00+09:00",
               "end_at": "2018-09-18T20:25:00+09:00"
@@ -25,6 +27,7 @@
             {
               "title": "非同期UI描画による高速なアプリケーションの実装",
               "description": "iOSアプリケーションの高速化においてメインスレッドをブロックするUIの描画コストは無視できない問題です。\n\n日経電子版アプリでは非同期なUI描画を実現するTexture（AsyncDisplayKit）を導入し、大量のテーブルをスムーズに描画しています。\n本セッションではTextureの検討から具体的な導入ステップ、導入にあたって遭遇したトラブルと対応方法について紹介します。",
+              "url": "https://fortee.jp/iosdc-japan-2018/proposal/cf5808bf-b232-40fc-a3f0-5a1c3c1897b4",
               "author": "@fumito_ito",
               "start_at": "2018-09-18T20:25:00+09:00",
               "end_at": "2018-09-18T20:40:00+09:00"
@@ -32,6 +35,7 @@
             {
               "title": "Flutter触りまくったからその知見を公開する",
               "description": "Flutterをたくさん触ったのでその知見を下記の観点からお話したいと思います。\n・個人開発で使えるか\n・ビジネスで使えるか\n・これからやり始めるのはまだ早いのか、今から始めるのがベストか",
+              "url": "https://fortee.jp/iosdc-japan-2018/proposal/366c3308-19c8-4c54-96e3-6358190ac26f",
               "author": "@yshogo87",
               "start_at": "2018-09-18T20:45:00+09:00",
               "end_at": "2018-09-18T20:50:00+09:00"
@@ -44,6 +48,7 @@
             {
               "title": "Factoryの自動生成によりテストを書きやすくする",
               "description": "テストを書くのって面倒ですよね？理由は様々ですが、ひとつは入力値と期待値を用意する手間だと思います。ベタに用意すると再利用性が低く、また構造変化に弱いというデメリットがあります。その解決策としてFactoryがあります。\n\nただ、実際はFactoryを用意するのも手間でコストがかかってしまいます。今回はFactoryを自動生成することで、再利用性が高く構造変化に強いツールを作りました。そのツールの特徴とコード生成についてお話します。",
+              "url": "https://fortee.jp/iosdc-japan-2018/proposal/4164f4e2-91a0-468a-b420-80b1f6a6576a",
               "author": "@nonchalant0303",
               "start_at": "2018-09-18T19:30:00+09:00",
               "end_at": "2018-09-18T20:00:00+09:00"
@@ -51,6 +56,7 @@
             {
               "title": "退屈なことはApp Store Connect APIにやらせよう",
               "description": "ついに発表されたApp Store Connect API。これを使えば何ができるのでしょうか？\n公開されている情報からいくつかの業務改善のアイディアをお話しします。\nまた、実際にApp Store Connect APIクライアントを実装してみて、Swiftで簡単なタスクを記述する方法をお伝えします。\n\nこのトークの内容はトーク時にApp Store Connect APIが公開されているかによって変わります。",
+              "url": "https://fortee.jp/iosdc-japan-2018/proposal/e48abccc-e824-4d36-bb4d-b373419cfaad",
               "author": "@giginet",
               "start_at": "2018-09-18T20:10:00+09:00",
               "end_at": "2018-09-18T20:25:00+09:00"
@@ -58,6 +64,7 @@
             {
               "title": "RxSwfitを採用したプロジェクトにおけるテストパターン",
               "description": "RxSwiftを採用したプロジェクトでは、多くの関数をObservableを返す関数として実装します。Observableを返す関数は通常の関数と違い、ユニットテストに少し工夫が必要になります。\nこのトークでは、日々Observableな関数に対してユニットテストを書いている中で見えてきたテストのパターンについてご紹介します。\n\n※関連ライブラリ\nQuick、Nimble、RxTest、RxBlocking、Mockingjay",
+              "url": "https://fortee.jp/iosdc-japan-2018/proposal/cf9c964e-c1a5-4c70-8a89-02f1a10b0bfe",
               "author": "@takehilo_kaneko",
               "start_at": "2018-09-18T20:25:00+09:00",
               "end_at": "2018-09-18T20:40:00+09:00"
@@ -65,6 +72,7 @@
             {
               "title": "Twitterのプロフィール画面の再実装を通して、ScrollViewを組み合わせたContainerVCの作り方を学ぶ",
               "description": "ScrollViewを組み合わせて快適に動くUIを作るには超えなければならないハードルがたくさんあります\n任意のViewControllerをはめ込めるContainerVCを作るのはさらに難しいですが、実現できればどのアプリのどの画面にも応用できるようになります\n\nこのトークでは、Twitterアプリのプロフィール画面を例にとって、ScrollViewを組み合わせたContainerVCはどのように実装すればよいのか解説します",
+              "url": "https://fortee.jp/iosdc-japan-2018/proposal/bf608f85-9928-4450-83b8-2db8956ccd97",
               "author": "@vespid",
               "start_at": "2018-09-18T20:40:00+09:00",
               "end_at": "2018-09-18T20:55:00+09:00"
@@ -85,6 +93,7 @@
             {
               "title": "デザイナーと一緒にコラボして仕上げるアニメーション実装とショーケース紹介",
               "description": "社内で新規アプリを開発するぞ、そして今回はシンプルなUIの中にも気持ちの良いアニメーションを盛り込むぞ！という所から始まったプロジェクトにてUI開発を担当した際に、得た知見やデザイナーとの協業の際に留意した点、シンプルな中にも心地よいアクセントをつけるためのポイントになる実装やデザイナーとの協業の際に使用したツール、UI表現をする過程で検討したライブラリ等やその他の点についてもご紹介できればと思います。",
+              "url": "https://fortee.jp/iosdc-japan-2018/proposal/5a1d14e4-a4f1-4d38-9eb5-29064aab8ac2",
               "author": "@fumiyasac",
               "start_at": "2018-09-20T19:30:00+09:00",
               "end_at": "2018-09-20T20:00:00+09:00"
@@ -92,6 +101,7 @@
             {
               "title": "UITesting with GraphQL",
               "description": "GraphQLを利用したiOSアプリケーションでUITestを実現する方法について説明します。\n\n# Agenda\n- GraphQLライブラリの「Apollo」を利用したiOSアプリケーション開発について\n- ServerSideSwiftを利用してCI上でWebMockを立ち上げUITestを行う方法について\n- WebMockでGraphQLのテストデータを効率よく記述するために開発したライブラリの紹介",
+              "url": "https://fortee.jp/iosdc-japan-2018/proposal/68ea9a5a-36ce-4816-b345-7de008f4ab25",
               "author": "@iida_0213",
               "start_at": "2018-09-20T20:10:00+09:00",
               "end_at": "2018-09-20T20:40:00+09:00"
@@ -99,6 +109,7 @@
             {
               "title": "「開発初心者は何がわからないのか」わからないを言語化するヒント",
               "description": "対象：メンターやメンティー\n概要:\ngitのブランチやマージの概念がわからなくてターミナルの黒い画面が怖い、コンフリクトを出そうもんなら発狂しそうになる。くらす？なにそれ美味しいの？状態でアプリ開発者になりました。\nわからないことを何がわからないのか、始めたばっかりの頃は言語化できません。\nアプリ初心者がどこに躓き、何がわからないのかを紹介します。",
+              "url": "https://fortee.jp/iosdc-japan-2018/proposal/28548bb8-4e07-41aa-ba9f-49041bac3027",
               "author": "@marina10172013",
               "start_at": "2018-09-20T20:45:00+09:00",
               "end_at": "2018-09-20T20:50:00+09:00"
@@ -106,6 +117,7 @@
             {
               "title": "iOSアプリのUniversal対応をやめようとした話",
               "description": "初めてiOSアプリをリリースする際、Deployment InfoのDevicesの選択肢として、「Universal, iPhone, iPad」と3つの選択肢があります。この中で、Universalを選択してリリースしたものの、様々な経緯によりUniversal対応をやめたいときがあります。やめようとしたけど結果的に無理だった話とともに、初回リリース時の選択は気をつけるべきという話をします。",
+              "url": "https://fortee.jp/iosdc-japan-2018/proposal/21295db1-7b7d-46be-b5e8-da3102f80f03",
               "author": "@_mogaming",
               "start_at": "2018-09-20T20:50:00+09:00",
               "end_at": "2018-09-20T20:55:00+09:00"
@@ -118,6 +130,7 @@
             {
               "title": "Metalによる素材を活かしたUI作り",
               "description": "iOSにはGPUの性質を活かしたデザインが様々なところで使われています。シェーダーを使うとグラフィカルでインタラクティブなデザインが可能になります。本トークではGPUの特徴を活かしたグラフィックプログラミングで独自のUIを作る方法について説明します。",
+              "url": "https://fortee.jp/iosdc-japan-2018/proposal/b823ee9c-111a-41b3-9449-3eca2a850bea",
               "author": "@kazuhiro494949",
               "start_at": "2018-09-20T19:30:00+09:00",
               "end_at": "2018-09-20T20:00:00+09:00"
@@ -125,6 +138,7 @@
             {
               "title": "Manual DI with ReactorKit",
               "description": "昨今のiOS界隈でも、関連する発表・トークが多い印象のDIについて。\n\nReactorKitは、RxSwiftをベースにFlux Architectureを実現するためのフレームワークですが、\nRxSwiftの恩恵により、イメージよりも手軽に、小回りの効いたDIを組み込むことができます。\n\n今回は、そんなReactorKitにフィットするDIを自作してみましょう。",
+              "url": "https://fortee.jp/iosdc-japan-2018/proposal/e5b8d536-93c8-45cc-983b-19af9be40619",
               "author": "@kz56cd",
               "start_at": "2018-09-20T20:10:00+09:00",
               "end_at": "2018-09-20T20:25:00+09:00"
@@ -132,6 +146,7 @@
             {
               "title": "Self-Documenting Code のススメ方",
               "description": "我々エンジニアは嫌いなことが二つある。一つはドキュメントを書くこと、一つは人の書いたドキュメントのないコードを読むこと。\n\nそれなら、コード自体がドキュメントになっていれば、みんなハッピーなのでは？\n\nこのトークは、そんな優しい世界を実現してくれる、Self-Documenting Code について語ります。",
+              "url": "https://fortee.jp/iosdc-japan-2018/proposal/3a92b6a9-1e77-4875-a46e-83912a6b25e3",
               "author": "@lovee",
               "start_at": "2018-09-20T20:25:00+09:00",
               "end_at": "2018-09-20T20:40:00+09:00"
@@ -139,6 +154,7 @@
             {
               "title": "ジェネリクスを使ったプロフィール画面の構築",
               "description": "Wantedly Visitのプロフィール画面には多くの項目があり、それぞれに編集画面があります。\nWantedly Visitではプロフィールの項目1つ1つに編集画面を実装するのではなく、ジェネリクスを使って汎用的に構築することで実装コストを下げることができました。\nこのトークでは、Wantedly Visitのプロフィール画面におけるジェネリクスの利用例をご紹介します。",
+              "url": "https://fortee.jp/iosdc-japan-2018/proposal/21947ef0-2c75-4f12-bcb7-8cfd4c03fe2c",
               "author": "@swiz_ard",
               "start_at": "2018-09-20T20:45:00+09:00",
               "end_at": "2018-09-20T21:00:00+09:00"
