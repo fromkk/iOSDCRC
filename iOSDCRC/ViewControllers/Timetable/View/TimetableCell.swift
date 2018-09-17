@@ -56,10 +56,12 @@ class TimetableCell: UICollectionViewCell, ReusableCollectionViewCell {
                 .font: UIFont.systemFont(ofSize: 16),
                 .foregroundColor: UIColor.rc.mainText
                 ])
-            attributedString.append(NSAttributedString(string: String(format: " %@", item.author), attributes: [
-                .font: UIFont.systemFont(ofSize: 16),
-                .foregroundColor: UIColor.rc.link
-                ]))
+            if let author = item.author {
+                attributedString.append(NSAttributedString(string: String(format: " %@", author), attributes: [
+                    .font: UIFont.systemFont(ofSize: 16),
+                    .foregroundColor: UIColor.rc.link
+                    ]))
+            }
             attributedString.append(NSAttributedString(string: String(format: " %@ - %@", item.startAt.toString(with: "HH:mm"), item.endAt.toString(with: "HH:mm")), attributes: [
                 .font: UIFont.systemFont(ofSize: 14),
                 .foregroundColor: UIColor.rc.subText
