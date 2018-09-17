@@ -36,7 +36,8 @@ struct Event: Codable, Equatable {
         struct Session: Codable, Equatable {
             let title: String
             let description: String
-            let author: String
+            let author: String?
+            let url: URL?
             let startAt: Date
             let endAt: Date
             
@@ -44,6 +45,7 @@ struct Event: Codable, Equatable {
                 case title
                 case description
                 case author
+                case url
                 case startAt = "start_at"
                 case endAt = "end_at"
             }
