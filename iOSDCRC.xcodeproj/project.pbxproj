@@ -83,6 +83,10 @@
 		ADDAD3912104AEC500B1153E /* TimetableInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDAD3902104AEC500B1153E /* TimetableInteractor.swift */; };
 		ADDAD3932104AEF300B1153E /* iosdcrc.json in Resources */ = {isa = PBXBuildFile; fileRef = ADDAD3922104AEF200B1153E /* iosdcrc.json */; };
 		ADF4B14B210C597F00BA2FDC /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF4B14A210C597F00BA2FDC /* Localizations.swift */; };
+		B5C25D612150B7630053C25B /* AboutPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C25D602150B7630053C25B /* AboutPresenterTests.swift */; };
+		B5C25D632150B7C70053C25B /* URLFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C25D622150B7C70053C25B /* URLFactoryTests.swift */; };
+		B5C25D652150B8700053C25B /* URLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C25D642150B8700053C25B /* URLFactory.swift */; };
+		B5C25D682150BD170053C25B /* AboutWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C25D672150BD170053C25B /* AboutWireframe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -247,6 +251,10 @@
 		ADDAD3922104AEF200B1153E /* iosdcrc.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = iosdcrc.json; sourceTree = "<group>"; };
 		ADF4B14A210C597F00BA2FDC /* Localizations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizations.swift; sourceTree = "<group>"; };
 		ADF4B14C210C5EAA00BA2FDC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B5C25D602150B7630053C25B /* AboutPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPresenterTests.swift; sourceTree = "<group>"; };
+		B5C25D622150B7C70053C25B /* URLFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFactoryTests.swift; sourceTree = "<group>"; };
+		B5C25D642150B8700053C25B /* URLFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLFactory.swift; sourceTree = "<group>"; };
+		B5C25D672150BD170053C25B /* AboutWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutWireframe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +383,8 @@
 			isa = PBXGroup;
 			children = (
 				AD5CBEA92104196200F32701 /* iOSDCRCTests.swift */,
+				B5C25D602150B7630053C25B /* AboutPresenterTests.swift */,
+				B5C25D622150B7C70053C25B /* URLFactoryTests.swift */,
 				AD5CBEAB2104196200F32701 /* Info.plist */,
 			);
 			path = iOSDCRCTests;
@@ -444,6 +454,7 @@
 				AD65BB372106ADD6007BE9AF /* Cancellable.swift */,
 				ADF4B14A210C597F00BA2FDC /* Localizations.swift */,
 				AD6BD730214686CC00C5F34C /* Injectable.swift */,
+				B5C25D642150B8700053C25B /* URLFactory.swift */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -602,6 +613,7 @@
 		ADDAD335210474C600B1153E /* About */ = {
 			isa = PBXGroup;
 			children = (
+				B5C25D662150BD0D0053C25B /* Router */,
 				AD908669210AA32100CD35BB /* Interfaces */,
 				ADCC6394210958EC008481EC /* Views */,
 				AD908659210AA0F300CD35BB /* Interactor */,
@@ -756,6 +768,14 @@
 				ADDAD38E2104AEBE00B1153E /* TimetablePresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B5C25D662150BD0D0053C25B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B5C25D672150BD170053C25B /* AboutWireframe.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1048,12 +1068,14 @@
 				ADDAD3472104876F00B1153E /* RootWireframe.swift in Sources */,
 				ADDAD34D2104892000B1153E /* RootInteractor.swift in Sources */,
 				AD1449F121055CDA00E0BFAE /* TimelineCell.swift in Sources */,
+				B5C25D682150BD170053C25B /* AboutWireframe.swift in Sources */,
 				AD6B2A1A21056C95001B6C4E /* NSLayoutConstraint+Extensions.swift in Sources */,
 				AD5CBF1F2104439E00F32701 /* Twitter.swift in Sources */,
 				ADDAD33E210483F700B1153E /* UIView+Extensions.swift in Sources */,
 				AD908672210AA84300CD35BB /* AboutCell.swift in Sources */,
 				ADDAD38F2104AEBE00B1153E /* TimetablePresenter.swift in Sources */,
 				ADDAD3232104511400B1153E /* TwitterRequest+Token.swift in Sources */,
+				B5C25D652150B8700053C25B /* URLFactory.swift in Sources */,
 				AD0042DF2107350B0057AA83 /* LoadingView.swift in Sources */,
 				ADDAD38521049DBD00B1153E /* Date+Extensions.swift in Sources */,
 				ADDAD32921045E3300B1153E /* TwitterRequest+Search.swift in Sources */,
@@ -1091,7 +1113,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C25D612150B7630053C25B /* AboutPresenterTests.swift in Sources */,
 				AD5CBEAA2104196200F32701 /* iOSDCRCTests.swift in Sources */,
+				B5C25D632150B7C70053C25B /* URLFactoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
