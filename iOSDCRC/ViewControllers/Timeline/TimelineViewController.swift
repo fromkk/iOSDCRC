@@ -10,15 +10,15 @@ import UIKit
 
 /// Twitterのタイムラインを表示
 class TimelineViewController: UITableViewController, TimelineViewProtocol, Injectable {
-    
+
     // MARK: - Dependency
-    
+
     typealias Dependency = TimelinePresenterProtocol
     private var presenter: TimelinePresenterProtocol!
     func inject(dependency: TimelinePresenterProtocol) {
         presenter = dependency
     }
-    
+
     // MARK: - lifecycle
     
     override func loadView() {
@@ -53,7 +53,7 @@ class TimelineViewController: UITableViewController, TimelineViewProtocol, Injec
         
         presenter.viewWillHide()
     }
-    
+
     // MARK: - UI
     
     lazy var loadingView = LoadingView()

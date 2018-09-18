@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2475E28EB4AA8DA69CE85ABC /* AboutInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E3383FDC5A9AA9F01AA6 /* AboutInteractorTests.swift */; };
+		2475EC1106D71BB7E3B22BB5 /* TimelinePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E0453DD4C11F138BFC58 /* TimelinePresenterTests.swift */; };
 		AD0042DF2107350B0057AA83 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0042DE2107350B0057AA83 /* LoadingView.swift */; };
 		AD1449F121055CDA00E0BFAE /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1449F021055CDA00E0BFAE /* TimelineCell.swift */; };
 		AD2BFF812105C5BC00187D05 /* TweetDateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BFF802105C5BC00187D05 /* TweetDateConverter.swift */; };
@@ -161,6 +162,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2475E0453DD4C11F138BFC58 /* TimelinePresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelinePresenterTests.swift; sourceTree = "<group>"; };
 		2475E3383FDC5A9AA9F01AA6 /* AboutInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutInteractorTests.swift; sourceTree = "<group>"; };
 		AD0042DE2107350B0057AA83 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		AD1449F021055CDA00E0BFAE /* TimelineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
@@ -570,6 +572,7 @@
 			isa = PBXGroup;
 			children = (
 				ADDAD32021044F7B00B1153E /* TimelinePresenter.swift */,
+				2475E0453DD4C11F138BFC58 /* TimelinePresenterTests.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1096,6 +1099,7 @@
 			files = (
 				AD5CBEAA2104196200F32701 /* iOSDCRCTests.swift in Sources */,
 				2475E28EB4AA8DA69CE85ABC /* AboutInteractorTests.swift in Sources */,
+				2475EC1106D71BB7E3B22BB5 /* TimelinePresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

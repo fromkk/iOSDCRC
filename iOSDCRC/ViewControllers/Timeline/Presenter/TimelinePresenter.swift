@@ -15,8 +15,11 @@ class TimelinePresenter: NSObject, TimelinePresenterProtocol {
     required init(dependencies: Dependencies) {
         self.view = dependencies.view
         self.interactor = dependencies.interactor
+        self.model = dependencies.model
         
         super.init()
+
+        self.model.delegate = self
         
         NotificationCenter.default.addObserver(self, selector: #selector(timerActivateIfNeeded(with:)), name: .UIApplicationDidBecomeActive, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(timerInactivateIfNeeded(with:)), name: Notification.Name.UIApplicationDidEnterBackground, object: nil)
@@ -27,24 +30,22 @@ class TimelinePresenter: NSObject, TimelinePresenterProtocol {
     let numberOfTweet: Int = 30
     
     let timeInterval: TimeInterval = 30
+
+    private let model: TokenModelProtocol
+
+    var accessToken: String? {
+        return self.model.state.accessToken
+    }
     
-    var accessToken: String?
-    
-    var isLoading: Bool = false
-    
+    var isLoading: Bool {
+        return self.model.state.isFetching || self.isSearching
+    }
+
+    private var isSearching: Bool = false
+
+
     func loadTimeline() {
-        guard !isLoading else { return }
-        
-        isLoading = true
-        interactor.token(with: Constants.Twitter.consumerKey, and: Constants.Twitter.consumerSecret) { [weak self] (accessToken) in
-            guard let accessToken = accessToken else {
-                self?.view.showAlertTokenGetFailed()
-                return
-            }
-            self?.isLoading = false
-            self?.accessToken = accessToken
-            self?.fetch()
-        }
+        self.model.fetch()
     }
     
     func viewWillShow() {
@@ -80,13 +81,13 @@ class TimelinePresenter: NSObject, TimelinePresenterProtocol {
             return
         }
         
-        isLoading = true
+        isSearching = true
         view.showLoading()
         interactor.search(with: accessToken, andKeyword: keyword, count: numberOfTweet, sinceID: nil, maxID: nil, completion: { [weak self] tweets in
             self?.tweets = tweets
             self?.view.showTimeline()
             self?.view.hideLoading()
-            self?.isLoading = false
+            self?.isSearching = false
         })
     }
     
@@ -95,12 +96,12 @@ class TimelinePresenter: NSObject, TimelinePresenterProtocol {
             return
         }
         
-        isLoading = true
+        isSearching = true
         interactor.search(with: accessToken, andKeyword: keyword, count: numberOfTweet, sinceID: sinceID, maxID: nil) { [weak self] (tweets) in
             self?.tweets.insert(contentsOf: tweets, at: 0)
             self?.view.addTimeline(at: (0..<tweets.count).map { $0 })
             self?.view.updateDate()
-            self?.isLoading = false
+            self?.isSearching = false
         }
     }
     
@@ -111,7 +112,7 @@ class TimelinePresenter: NSObject, TimelinePresenterProtocol {
             return
         }
         
-        isLoading = true
+        isSearching = true
         view.showLoadingBottom()
         interactor.search(with: accessToken, andKeyword: keyword, count: numberOfTweet, sinceID: nil, maxID: maxID - 1) { [weak self] (tweets) in
             guard let _self = self else { return }
@@ -123,7 +124,7 @@ class TimelinePresenter: NSObject, TimelinePresenterProtocol {
             
             _self.view.addTimeline(at: indexes)
             _self.view.hideLoadingBottom()
-            _self.isLoading = false
+            _self.isSearching = false
         }
     }
     
@@ -134,5 +135,104 @@ class TimelinePresenter: NSObject, TimelinePresenterProtocol {
     func tweet(at index: Int) -> TimelinePresenterProtocol.Tweet? {
         guard index < numberOfTweets() else { return nil }
         return tweets[index]
+    }
+}
+
+
+extension TimelinePresenter: TokenModelDelegate {
+    func tokenModelStateDidChange(state: TokenModelState) {
+        switch state {
+        case .notFetchedYet, .fetching:
+            return
+
+        case .fetched(accessToken: let accessToken):
+            self.fetch()
+
+        case .failed(because: let reason):
+            self.view.showAlertTokenGetFailed()
+        }
+    }
+}
+
+
+protocol TokenModelProtocol: class {
+    weak var delegate: TokenModelDelegate? { get set }
+    var state: TokenModelState { get }
+
+    func fetch()
+}
+
+
+enum TokenModelState: Equatable {
+    case notFetchedYet
+    case fetching
+    case fetched(accessToken: String)
+    case failed(because: Reason)
+
+
+    var isFetching: Bool {
+        switch self {
+        case .fetching:
+            return true
+        case .fetched, .failed, .notFetchedYet:
+            return false
+        }
+    }
+
+
+    var accessToken: String? {
+        switch self {
+        case .fetching, .notFetchedYet, .failed:
+            return nil
+        case .fetched(accessToken: let accessToken):
+            return accessToken
+        }
+    }
+
+
+    enum Reason: Equatable {
+        case unspecified(debugInfo: String)
+    }
+}
+
+
+protocol TokenModelDelegate: class {
+    func tokenModelStateDidChange(state: TokenModelState)
+}
+
+
+class TokenModel: TokenModelProtocol {
+    weak var delegate: TokenModelDelegate? {
+        didSet {
+            self.delegate?.tokenModelStateDidChange(state: self.state)
+        }
+    }
+    private(set) var state: TokenModelState = .notFetchedYet
+    private let interactor: TwitterAccessTokenInteractorProtocol
+
+
+    init(interactor: TwitterAccessTokenInteractorProtocol) {
+        self.interactor = interactor
+    }
+
+
+    func fetch() {
+        guard !self.state.isFetching else { return }
+        self.state = .fetching
+        self.delegate?.tokenModelStateDidChange(state: self.state)
+
+        self.interactor.token(with: Constants.Twitter.consumerKey, and: Constants.Twitter.consumerSecret) { [weak self] accessToken in
+            guard let strongSelf = self else { return }
+
+            if let accessToken = accessToken {
+                strongSelf.state = .fetched(accessToken: accessToken)
+            }
+            else {
+                // FIXME: エラーはもうちょっとわかりやすくしたいね
+                strongSelf.state = .failed(because: .unspecified(debugInfo: "nil"))
+            }
+
+            strongSelf.delegate?.tokenModelStateDidChange(state: strongSelf.state)
+        }
     }
 }

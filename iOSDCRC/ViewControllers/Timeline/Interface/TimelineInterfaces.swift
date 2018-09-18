@@ -8,8 +8,7 @@
 
 import UIKit
 
-protocol TimelineInteractorProtocol {
-    
+protocol TwitterAccessTokenInteractorProtocol {
     /// アクセストークンを取得する
     ///
     /// - Parameters:
@@ -17,7 +16,10 @@ protocol TimelineInteractorProtocol {
     ///   - consumerSecret: Twitterのconsumer_secret
     ///   - completion: (accessToken: String?) -> ()
     func token(with consumerKey: String, and consumerSecret: String, completion: @escaping (String?) -> ())
-    
+}
+
+
+protocol TwitterSearchInteractorProtocol {
     /// 検索を実行する
     ///
     /// - Parameters:
@@ -30,12 +32,18 @@ protocol TimelineInteractorProtocol {
     func search(with accessToken: String, andKeyword keyword: String, count: Int, sinceID: Int64?, maxID: Int64?, completion: @escaping ([Twitter.Response.Status]) -> ())
 }
 
+
+// FIXME: 長期的には消したい。
+protocol TimelineInteractorProtocol: TwitterAccessTokenInteractorProtocol, TwitterSearchInteractorProtocol {}
+
+
 protocol TimelinePresenterProtocol: class {
     typealias Tweet = Twitter.Response.Status
     
     typealias Dependencies = (
         view: TimelineViewProtocol,
-        interactor: TimelineInteractorProtocol
+        interactor: TimelineInteractorProtocol,
+        model: TokenModelProtocol
     )
     init(dependencies: Dependencies)
     

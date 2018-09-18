@@ -18,7 +18,13 @@ class RootWireframe: RootWireframeProtocol {
         let aboutViewController = AboutViewController()
         
         let view = aboutViewController
-        let interactor = AboutInteractor()
+        let interactor = AboutInteractor(
+            dependsTo: (
+                resourceURLRepository: BundleResourceURLRepository(Bundle.main),
+                dataRepository: DataRepository(),
+                jsonDecodingRepository: JSONDecodingRepository<AboutEntity>().asAny()
+            )
+        )
         
         let presenter = AboutPresenter(dependencies: (view: view, interactor: interactor))
         aboutViewController.inject(dependency: presenter)
@@ -29,9 +35,13 @@ class RootWireframe: RootWireframeProtocol {
         let timelineViewController = TimelineViewController()
         
         let view = timelineViewController
-        let interacotor = TimelineInteractor()
+        let interactor = TimelineInteractor()
         
-        let presenter = TimelinePresenter(dependencies: (view: view, interactor: interacotor))
+        let presenter = TimelinePresenter(dependencies: (
+            view: view,
+            interactor: interactor,
+            model: TokenModel(interactor: interactor)
+        ))
         timelineViewController.inject(dependency: presenter)
         viewController.navigationController?.pushViewController(timelineViewController, animated: true)
     }
