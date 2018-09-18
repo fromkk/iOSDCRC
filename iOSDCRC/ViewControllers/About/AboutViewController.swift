@@ -9,9 +9,9 @@
 import UIKit
 
 final class AboutViewController: UITableViewController, AboutViewProtocol, Injectable {
-    
+
     // MARK: - Dependency
-    
+
     typealias Dependency = AboutPresenterProtocol
     private var presenter: AboutPresenterProtocol!
     func inject(dependency: AboutPresenterProtocol) {
@@ -28,7 +28,7 @@ final class AboutViewController: UITableViewController, AboutViewProtocol, Injec
         
         presenter.loadAbout()
     }
-    
+
     // MARK: - UITableViewDataSource
     
     override func numberOfSections(in tableView: UITableView) -> Int {

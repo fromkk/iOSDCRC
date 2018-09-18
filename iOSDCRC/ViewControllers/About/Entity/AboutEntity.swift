@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct AboutEntity: Codable {
+struct AboutEntity: Codable, Equatable {
     let dates: [DateRange]
     let locations: [Location]
     let sponsors: [Sponsor]
@@ -23,7 +23,7 @@ struct AboutEntity: Codable {
         case staffs
     }
     
-    struct DateRange: Codable {
+    struct DateRange: Codable, Equatable {
         let from: Date
         let to: Date
         
@@ -33,7 +33,7 @@ struct AboutEntity: Codable {
         }
     }
     
-    struct Location: Codable {
+    struct Location: Codable, Equatable {
         let name: String
         let postalCode: String
         let address: String
@@ -45,7 +45,7 @@ struct AboutEntity: Codable {
         }
     }
     
-    struct Sponsor: Codable {
+    struct Sponsor: Codable, Equatable {
         let name: String
         let description: String
         
@@ -55,7 +55,7 @@ struct AboutEntity: Codable {
         }
     }
     
-    struct TwitterAccount: Codable {
+    struct TwitterAccount: Codable, Equatable {
         let name: String
         let account: String
         
