@@ -11,27 +11,22 @@ import Foundation
 class TimelinePresenter: NSObject, TimelinePresenterProtocol {
     unowned var view: TimelineViewProtocol
     var interactor: TimelineInteractorProtocol
-    
+    private let tweetsModel: TweetsModelProtocol = TweetsModel()
+    private let accessToken: String
+
     required init(dependencies: Dependencies) {
         self.view = dependencies.view
         self.interactor = dependencies.interactor
-        
+
         super.init()
         
         NotificationCenter.default.addObserver(self, selector: #selector(timerActivateIfNeeded(with:)), name: .UIApplicationDidBecomeActive, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(timerInactivateIfNeeded(with:)), name: Notification.Name.UIApplicationDidEnterBackground, object: nil)
     }
     
-    let keyword = "#iosdcrc"
-    
-    let numberOfTweet: Int = 30
-    
+
     let timeInterval: TimeInterval = 30
-    
-    var accessToken: String?
-    
-    var isLoading: Bool = false
-    
+
     func loadTimeline() {
         guard !isLoading else { return }
         
@@ -76,11 +71,10 @@ class TimelinePresenter: NSObject, TimelinePresenterProtocol {
     var tweets: [Tweet] = []
     
     func fetch() {
-        guard let accessToken = accessToken, !isLoading else {
-            return
-        }
+        guard let accessToken = accessToken else { return }
+
+        self.tweetsModel.fetch()
         
-        isLoading = true
         view.showLoading()
         interactor.search(with: accessToken, andKeyword: keyword, count: numberOfTweet, sinceID: nil, maxID: nil, completion: { [weak self] tweets in
             self?.tweets = tweets
@@ -91,9 +85,7 @@ class TimelinePresenter: NSObject, TimelinePresenterProtocol {
     }
     
     func findNewTweets() {
-        guard let accessToken = accessToken, let sinceID = tweets.map({ $0.id }).max(), !isLoading else {
-            return
-        }
+        guard let accessToken = accessToken else { return }
         
         isLoading = true
         interactor.search(with: accessToken, andKeyword: keyword, count: numberOfTweet, sinceID: sinceID, maxID: nil) { [weak self] (tweets) in
@@ -135,4 +127,120 @@ class TimelinePresenter: NSObject, TimelinePresenterProtocol {
         guard index < numberOfTweets() else { return nil }
         return tweets[index]
     }
+}
+
+
+extension TimelinePresenter: TweetsModelDelegate {
+    func stateDidChange(_ state: TweetsModelState) {
+        switch state {
+        case .notInitialized, .fetched, .fetching:
+            state.tweets
+        }
+    }
+}
+
+
+protocol TweetsModelProtocol {
+    var state: TweetsModelState { get }
+    weak var delegate: TweetsModelDelegate?
+
+    func findOldTweets()
+    func fetch()
+}
+
+
+enum TweetsModelState {
+    typealias Tweet = Twitter.Response.Status
+
+    case notInitialized
+    case firstFetching
+    case fetched(tweets: [Tweet])
+    case fetching(tweets: [Tweet])
+
+
+    var isFetching: Bool {
+        switch self {
+        case .fetched, .notInitialized:
+            return false
+        case .fetching, .firstFetching:
+            return true
+        }
+    }
+
+
+    var isNotInitialized: Bool {
+        switch self {
+        case .notInitialized:
+            return true
+        case .firstFetching, .fetched, .fetching:
+            return false
+        }
+    }
+
+
+    var tweets: [Tweet] {
+        switch self {
+        case .notInitialized, .firstFetching:
+            return []
+        case .fetched(tweets: let tweets), .fetching(tweets: let tweets):
+            return tweets
+        }
+    }
+}
+
+
+
+class TweetsModel: TweetsModelProtocol {
+    private(set) var state: TweetsModelState = .notInitialized
+    weak var delegate: TweetsModelDelegate?
+
+    private let keyword = "#iosdcrc"
+    private let numberOfTweet: Int = 30
+    private let count: Int
+
+
+    func findOldTweets(accessToken: String) {
+        guard !self.state.isFetching else { return }
+        self.state = .fetching(tweets: self.state.tweets)
+
+        interactor.search(
+            with: self.accessToken,
+            andKeyword: self.keyword,
+            count: self.numberOfTweet,
+            sinceID: sinceID,
+            maxID: nil
+        ) { [weak self] (tweets) in
+            guard let strongSelf = self else { return }
+            var tweets = strongSelf.state.tweets
+            tweets.insert(contentsOf: tweets, at: 0)
+            strongSelf.state = .fetched(tweets: tweets)
+        }
+    }
+
+
+    func fetch(accessToken: String) {
+        guard !self.state.isFetching else { return }
+        self.state = self.state.isNotInitialized
+            ? .firstFetching
+            : .fetching(tweets: self.state.tweets)
+
+        interactor.search(
+            with: self.accessToken,
+            andKeyword: self.keyword,
+            count: self.numberOfTweet,
+            sinceID: self.state.tweets.map { $0.id } .max(),
+            maxID: nil
+        ) { [weak self] (tweets) in
+            guard let strongSelf = self else { return }
+            var tweets = strongSelf.state.tweets
+            tweets.insert(contentsOf: tweets, at: 0)
+            strongSelf.state = .fetched(tweets: tweets)
+        }
+    }
+}
+
+
+
+protocol TweetsModelDelegate: class {
+    func stateDidChange(_ state: TweetsModelState)
 }
