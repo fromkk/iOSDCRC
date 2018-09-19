@@ -6,4 +6,7 @@
 //  Copyright © 2018年 Kazuya Ueoka. All rights reserved.
 //
 
-import Foundation
+import XCTest
+@testable import iOSDCRC
+
+

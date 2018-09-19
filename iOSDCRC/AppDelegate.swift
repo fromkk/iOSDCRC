@@ -10,7 +10,7 @@ import UIKit
 
 // TODO
 // - [ ] About画面でTwitterIDをタップしたらTwitterアプリに遷移する
-//   - [ ] Twitterユーザー画面に遷移するためのURLを生成する
+//   - [x] Twitterユーザー画面に遷移するためのURLを生成する
 //   - [ ] Twitterユーザー画面に遷移する
 //     - [ ] PresenterにMockを差し込んでテストする
 

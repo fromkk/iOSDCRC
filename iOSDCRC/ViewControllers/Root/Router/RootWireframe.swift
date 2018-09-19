@@ -19,8 +19,9 @@ class RootWireframe: RootWireframeProtocol {
         
         let view = aboutViewController
         let interactor = AboutInteractor()
+        let router = AboutWireframe()
         
-        let presenter = AboutPresenter(dependencies: (view: view, interactor: interactor))
+        let presenter = AboutPresenter(dependencies: (view: view, interactor: interactor, router: router))
         aboutViewController.inject(dependency: presenter)
         viewController.navigationController?.pushViewController(aboutViewController, animated: true)
     }

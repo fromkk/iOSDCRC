@@ -28,6 +28,12 @@ final class AboutViewController: UITableViewController, AboutViewProtocol, Injec
         
         presenter.loadAbout()
     }
+
+    // MARK: - UITableViewDelegate
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.didSelectRowAt(indexPath: indexPath)
+    }
     
     // MARK: - UITableViewDataSource
     

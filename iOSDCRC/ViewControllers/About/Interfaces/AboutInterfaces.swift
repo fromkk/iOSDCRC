@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol AboutWireframeProtocol {
+    func transitionToTwitterUser(url: URL)
+}
+
 protocol AboutInteractorProtocol {
     
     /// コンテンツを取得する
@@ -22,10 +26,13 @@ protocol AboutPresenterProtocol {
     
     typealias Dependencies = (
         view: AboutViewProtocol,
-        interactor: AboutInteractorProtocol
+        interactor: AboutInteractorProtocol,
+        router: AboutWireframeProtocol
     )
     init(dependencies: Dependencies)
-    
+
+    func didSelectRowAt(indexPath: IndexPath)
+
     /// コンテンツを取得する
     func loadAbout()
     

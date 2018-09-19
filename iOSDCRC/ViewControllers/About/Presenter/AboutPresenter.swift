@@ -11,14 +11,28 @@ import Foundation
 class AboutPresenter: AboutPresenterProtocol {
     unowned var view: AboutViewProtocol
     var interactor: AboutInteractorProtocol
+    var router: AboutWireframeProtocol
     
     required init(dependencies: Dependencies) {
         self.view = dependencies.view
         self.interactor = dependencies.interactor
+        self.router = dependencies.router
     }
     
     var aboutEntity: AboutEntity?
-    
+
+    func didSelectRowAt(indexPath: IndexPath) {
+        guard indexPath.section == 3 else { return }
+        // TwitterのscreenName
+        guard let screenName = speaker(at: indexPath.row)?.account else { return }
+
+        // さっきのURLほしい
+        guard let url = URLFactory.createTwitterUserURL(screenName: screenName) else { return }
+
+        // 画面遷移したい
+        router.transitionToTwitterUser(url: url)
+    }
+
     func loadAbout() {
         interactor.fetch { [weak self] (entity) in
             self?.aboutEntity = entity

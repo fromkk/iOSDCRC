@@ -6,4 +6,10 @@
 //  Copyright © 2018年 Kazuya Ueoka. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+struct AboutWireframe: AboutWireframeProtocol {
+    func transitionToTwitterUser(url: URL) {
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
+}
