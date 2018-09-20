@@ -38,7 +38,8 @@ protocol TimelinePresenterProtocol: class {
     
     typealias Dependencies = (
         view: TimelineViewProtocol,
-        interactor: TimelineInteractorProtocol
+        interactor: TimelineInteractorProtocol,
+        tokenModel: TwitterAccessTokenModelProtocol
     )
     init(dependencies: Dependencies)
     

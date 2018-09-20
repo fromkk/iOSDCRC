@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2475E96A8C252A0864527F97 /* TwitterAccessTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475ED32ED5E818D23A7E715 /* TwitterAccessTokenModel.swift */; };
 		2475EBAA9CB4EE760566E2F3 /* TimelinePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E3B1F80667603AEB345E /* TimelinePresenterTests.swift */; };
 		AD0042DF2107350B0057AA83 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0042DE2107350B0057AA83 /* LoadingView.swift */; };
 		AD1449F121055CDA00E0BFAE /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1449F021055CDA00E0BFAE /* TimelineCell.swift */; };
@@ -162,6 +163,7 @@
 
 /* Begin PBXFileReference section */
 		2475E3B1F80667603AEB345E /* TimelinePresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelinePresenterTests.swift; sourceTree = "<group>"; };
+		2475ED32ED5E818D23A7E715 /* TwitterAccessTokenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAccessTokenModel.swift; sourceTree = "<group>"; };
 		AD0042DE2107350B0057AA83 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		AD1449F021055CDA00E0BFAE /* TimelineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
 		AD2BFF802105C5BC00187D05 /* TweetDateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDateConverter.swift; sourceTree = "<group>"; };
@@ -570,6 +572,7 @@
 			children = (
 				ADDAD32021044F7B00B1153E /* TimelinePresenter.swift */,
 				2475E3B1F80667603AEB345E /* TimelinePresenterTests.swift */,
+				2475ED32ED5E818D23A7E715 /* TwitterAccessTokenModel.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1087,6 +1090,7 @@
 				ADDAD32F21045F3100B1153E /* TwitterResponse+User.swift in Sources */,
 				ADDAD38021049D4900B1153E /* TimetableCell.swift in Sources */,
 				ADDAD32D21045EDB00B1153E /* TwitterResponse+Token.swift in Sources */,
+				2475E96A8C252A0864527F97 /* TwitterAccessTokenModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

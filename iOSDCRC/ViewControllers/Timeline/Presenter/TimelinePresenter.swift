@@ -15,9 +15,12 @@ class TimelinePresenter: NSObject, TimelinePresenterProtocol {
     required init(dependencies: Dependencies) {
         self.view = dependencies.view
         self.interactor = dependencies.interactor
-        
+        self.tokenModel = dependencies.tokenModel
+
         super.init()
-        
+
+        self.tokenModel.delegate = self
+
         NotificationCenter.default.addObserver(self, selector: #selector(timerActivateIfNeeded(with:)), name: .UIApplicationDidBecomeActive, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(timerInactivateIfNeeded(with:)), name: Notification.Name.UIApplicationDidEnterBackground, object: nil)
     }
@@ -27,24 +30,17 @@ class TimelinePresenter: NSObject, TimelinePresenterProtocol {
     let numberOfTweet: Int = 30
     
     let timeInterval: TimeInterval = 30
+
+    private let tokenModel: TwitterAccessTokenModelProtocol
     
-    var accessToken: String?
-    
-    var isLoading: Bool = false
+    var isLoading: Bool {
+        return self.isSearching || self.tokenModel.state.isLoading
+    }
+
+    private var isSearching = false
     
     func loadTimeline() {
-        guard !isLoading else { return }
-        
-        isLoading = true
-        interactor.token(with: Constants.Twitter.consumerKey, and: Constants.Twitter.consumerSecret) { [weak self] (accessToken) in
-            guard let accessToken = accessToken else {
-                self?.view.showAlertTokenGetFailed()
-                return
-            }
-            self?.isLoading = false
-            self?.accessToken = accessToken
-            self?.fetch()
-        }
+        self.tokenModel.fetch()
     }
     
     func viewWillShow() {
@@ -76,42 +72,42 @@ class TimelinePresenter: NSObject, TimelinePresenterProtocol {
     var tweets: [Tweet] = []
     
     func fetch() {
-        guard let accessToken = accessToken, !isLoading else {
+        guard let accessToken = self.tokenModel.state.accessToken, !isLoading else {
             return
         }
         
-        isLoading = true
+        isSearching = true
         view.showLoading()
         interactor.search(with: accessToken, andKeyword: keyword, count: numberOfTweet, sinceID: nil, maxID: nil, completion: { [weak self] tweets in
             self?.tweets = tweets
             self?.view.showTimeline()
             self?.view.hideLoading()
-            self?.isLoading = false
+            self?.isSearching = false
         })
     }
     
     func findNewTweets() {
-        guard let accessToken = accessToken, let sinceID = tweets.map({ $0.id }).max(), !isLoading else {
+        guard let accessToken = self.tokenModel.state.accessToken, let sinceID = tweets.map({ $0.id }).max(), !isLoading else {
             return
         }
         
-        isLoading = true
+        isSearching = true
         interactor.search(with: accessToken, andKeyword: keyword, count: numberOfTweet, sinceID: sinceID, maxID: nil) { [weak self] (tweets) in
             self?.tweets.insert(contentsOf: tweets, at: 0)
             self?.view.addTimeline(at: (0..<tweets.count).map { $0 })
             self?.view.updateDate()
-            self?.isLoading = false
+            self?.isSearching = false
         }
     }
     
     var hasNext: Bool = true
     
     func findOldTweets() {
-        guard let accessToken = accessToken, let maxID = tweets.map({ $0.id }).min(), !isLoading, hasNext else {
+        guard let accessToken = self.tokenModel.state.accessToken, let maxID = tweets.map({ $0.id }).min(), !isLoading, hasNext else {
             return
         }
         
-        isLoading = true
+        isSearching = true
         view.showLoadingBottom()
         interactor.search(with: accessToken, andKeyword: keyword, count: numberOfTweet, sinceID: nil, maxID: maxID - 1) { [weak self] (tweets) in
             guard let _self = self else { return }
@@ -123,7 +119,7 @@ class TimelinePresenter: NSObject, TimelinePresenterProtocol {
             
             _self.view.addTimeline(at: indexes)
             _self.view.hideLoadingBottom()
-            _self.isLoading = false
+            _self.isSearching = false
         }
     }
     
@@ -138,56 +134,15 @@ class TimelinePresenter: NSObject, TimelinePresenterProtocol {
 }
 
 
-
-enum TwitterAccessTokenModelState: Equatable {
-    case notLoadYet
-    case loading
-    case loaded(accessToken: String)
-    case failed
-
-
-    var isLoading: Bool {
-        switch self {
-        case .notLoadYet, .failed, .loaded:
-            return false
-        case .loading:
-            return true
+extension TimelinePresenter: TwitterAccessTokenModelDelegate {
+    func twitterAccessTokenModelStateDidChange(state: TwitterAccessTokenModelState) {
+        switch state {
+        case .notLoadYet, .loading:
+            return
+        case .loaded:
+            self.fetch()
+        case .failed:
+            self.view.showAlertTokenGetFailed()
         }
     }
-}
-
-
-class TwitterAccessTokenModel {
-    var state: TwitterAccessTokenModelState = .notLoadYet
-    private let interactor: TwitterAccessTokenInteractorProtocol
-    weak var delegate: TwitterAccessTokenModelDelegate?
-
-
-    init(interactor: TwitterAccessTokenInteractorProtocol)  {
-        self.interactor = interactor
-    }
-
-
-    func fetch() {
-        guard !self.state.isLoading else { return }
-
-        self.state = .loading
-        self.delegate?.twitterAccessTokenModelStateDidChange(state: self.state)
-        interactor.token(with: Constants.Twitter.consumerKey, and: Constants.Twitter.consumerSecret) { [weak self] (accessToken) in
-            guard let strongSelf = self else { return }
-
-            guard let accessToken = accessToken else {
-                strongSelf.state = .failed
-                strongSelf.delegate?.twitterAccessTokenModelStateDidChange(state: strongSelf.state)
-                return
-            }
-            strongSelf.state = .loaded(accessToken: accessToken)
-            strongSelf.delegate?.twitterAccessTokenModelStateDidChange(state: strongSelf.state)
-        }
-    }
-}
-
-
-protocol TwitterAccessTokenModelDelegate: AnyObject {
-    func twitterAccessTokenModelStateDidChange(state: TwitterAccessTokenModelState)
 }
