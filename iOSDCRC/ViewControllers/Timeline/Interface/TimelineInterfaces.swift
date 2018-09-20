@@ -8,8 +8,7 @@
 
 import UIKit
 
-protocol TimelineInteractorProtocol {
-    
+protocol TwitterAccessTokenInteractorProtocol {
     /// アクセストークンを取得する
     ///
     /// - Parameters:
@@ -17,7 +16,11 @@ protocol TimelineInteractorProtocol {
     ///   - consumerSecret: Twitterのconsumer_secret
     ///   - completion: (accessToken: String?) -> ()
     func token(with consumerKey: String, and consumerSecret: String, completion: @escaping (String?) -> ())
-    
+}
+
+// FIXME: 将来的直したいんだよなぁ...
+protocol TimelineInteractorProtocol: TwitterAccessTokenInteractorProtocol {
+
     /// 検索を実行する
     ///
     /// - Parameters:
