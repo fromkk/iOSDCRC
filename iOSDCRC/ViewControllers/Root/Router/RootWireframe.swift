@@ -29,9 +29,9 @@ class RootWireframe: RootWireframeProtocol {
         let timelineViewController = TimelineViewController()
         
         let view = timelineViewController
-        let interacotor = TimelineInteractor()
+        let interactor = TimelineInteractor()
         
-        let presenter = TimelinePresenter(dependencies: (view: view, interactor: interacotor))
+        let presenter = TimelinePresenter(dependencies: (view: view, interactor: interactor, tokenModel: TwitterAccessTokenModel(interactor: interactor)))
         timelineViewController.inject(dependency: presenter)
         viewController.navigationController?.pushViewController(timelineViewController, animated: true)
     }
